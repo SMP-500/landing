@@ -44,9 +44,9 @@
   --tax-2:      #cbd5e4;
   --tax-ink:    #1a2440;
 
-  --max: 1380px;
-  --max-narrow: 1080px;
-  --gutter: clamp(28px, 6vw, 88px);
+  --max: 1200px;
+  --max-narrow: 960px;
+  --gutter: clamp(32px, 8vw, 140px);
 }
 
 * {
@@ -139,18 +139,19 @@ body {
   position: relative;
 }
 .hero .eyebrow {
-  font-size: clamp(17px, 2vw, 21px);
-  line-height: 1.1905;
+  font-size: clamp(13px, 1.4vw, 16px);
+  line-height: 1.2;
   font-weight: 600;
-  letter-spacing: 0.011em;
-  color: var(--ink);
-  margin: 0 0 8px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin: 0 0 14px;
 }
 .hero h1 {
-  font-size: clamp(48px, 9vw, 96px);
-  line-height: 1.0417;
+  font-size: clamp(38px, 6.5vw, 72px);
+  line-height: 1.07;
   font-weight: 700;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.04em;
   margin: 0 0 clamp(16px, 2vw, 24px);
   color: var(--ink);
   max-width: 16ch;
@@ -165,13 +166,13 @@ body {
   white-space: nowrap;
 }
 .hero .lede {
-  font-size: clamp(19px, 2.3vw, 28px);
-  line-height: 1.3;
+  font-size: clamp(16px, 1.7vw, 21px);
+  line-height: 1.45;
   font-weight: 500;
   letter-spacing: 0.004em;
   color: var(--ink-3);
-  max-width: 760px;
-  margin: 0 auto clamp(48px, 6vw, 72px);
+  max-width: 680px;
+  margin: 0 auto clamp(40px, 5vw, 64px);
 }
 .hero .meta {
   font-size: 14px;
@@ -215,38 +216,39 @@ section.dark p, section.dark .lede { color: #a1a1a6; }
   margin: 0 auto clamp(56px, 7vw, 88px);
 }
 .s-head .kicker {
-  font-size: clamp(15px, 1.8vw, 19px);
+  font-size: clamp(12px, 1.2vw, 14px);
   font-weight: 600;
-  letter-spacing: 0.012em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--ink-4);
   margin-bottom: clamp(12px, 1.5vw, 16px);
 }
 section.dark .s-head .kicker { color: #86868b; }
 h2 {
-  font-size: clamp(36px, 6vw, 72px);
-  line-height: 1.0625;
+  font-size: clamp(28px, 4.5vw, 52px);
+  line-height: 1.1;
   font-weight: 700;
-  letter-spacing: -0.04em;
-  margin: 0 0 clamp(14px, 2vw, 22px);
+  letter-spacing: -0.035em;
+  margin: 0 0 clamp(12px, 1.5vw, 18px);
   color: var(--ink);
 }
 h3 {
-  font-size: clamp(24px, 3.5vw, 36px);
-  line-height: 1.16667;
+  font-size: clamp(20px, 2.6vw, 28px);
+  line-height: 1.2;
   font-weight: 700;
-  letter-spacing: -0.025em;
-  margin: 0 0 12px;
+  letter-spacing: -0.022em;
+  margin: 0 0 10px;
 }
 h4 {
-  font-size: clamp(17px, 2vw, 21px);
-  line-height: 1.3;
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.35;
   font-weight: 600;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.012em;
   margin: 0 0 8px;
 }
 .lede {
-  font-size: clamp(19px, 2.2vw, 28px);
-  line-height: 1.21429;
+  font-size: clamp(16px, 1.8vw, 21px);
+  line-height: 1.45;
   font-weight: 500;
   letter-spacing: 0.004em;
   color: var(--ink-3);
@@ -269,10 +271,10 @@ h4 {
   padding: clamp(40px, 6vw, 80px) 0;
 }
 .identity p {
-  font-size: clamp(32px, 5.5vw, 64px);
-  line-height: 1.07;
+  font-size: clamp(26px, 4vw, 44px);
+  line-height: 1.18;
   font-weight: 600;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.022em;
   color: var(--ink);
   margin: 0;
 }
@@ -307,18 +309,18 @@ section.bg-2 .m-card { background: var(--bg); }
   pointer-events: none;
 }
 .m-card .avatar {
-  width: 96px;
-  height: 96px;
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
   background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 38px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--ink);
-  margin: 0 auto 28px;
-  letter-spacing: -0.04em;
+  margin: 0 auto 22px;
+  letter-spacing: -0.03em;
 }
 .m-card .role {
   font-size: 12px;
@@ -329,10 +331,10 @@ section.bg-2 .m-card { background: var(--bg); }
   margin-bottom: 8px;
 }
 .m-card .name {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
-  letter-spacing: -0.022em;
-  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
 }
 .m-card .stack {
   font-size: 13px;
@@ -407,15 +409,15 @@ section.bg-2 .m-card { background: var(--bg); }
   margin-bottom: 14px;
 }
 .b h3 {
-  font-size: clamp(22px, 2.4vw, 30px);
-  line-height: 1.16;
-  letter-spacing: -0.022em;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   margin-bottom: 10px;
 }
 .b p {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--ink-3);
-  line-height: 1.46;
+  line-height: 1.5;
   letter-spacing: -0.005em;
   margin: 0;
 }
@@ -445,14 +447,14 @@ section.bg-2 .m-card { background: var(--bg); }
   .showcase { grid-template-columns: 1fr; }
 }
 .showcase .copy h2 {
-  font-size: clamp(32px, 5vw, 56px);
-  line-height: 1.08;
+  font-size: clamp(26px, 4vw, 44px);
+  line-height: 1.12;
 }
 .showcase .copy .lede {
-  font-size: clamp(17px, 2vw, 22px);
-  line-height: 1.38;
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.5;
   color: var(--ink-3);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 .showcase .copy .pts {
   list-style: none;
@@ -531,9 +533,9 @@ section.dark .showcase .copy .pts li:last-child { border-bottom-color: rgba(255,
   pointer-events: none;
 }
 .wedding-visual .stat-overlay .col .n {
-  font-size: clamp(40px, 6vw, 64px);
+  font-size: clamp(32px, 4.5vw, 52px);
   font-weight: 800;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.035em;
   line-height: 0.95;
   color: var(--wedding-ink);
 }
@@ -634,9 +636,9 @@ section.dark .showcase .copy .pts li:last-child { border-bottom-color: rgba(255,
   pointer-events: none;
 }
 .tax-visual .stat-overlay .n {
-  font-size: clamp(40px, 6vw, 64px);
+  font-size: clamp(32px, 4.5vw, 52px);
   font-weight: 800;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.035em;
   line-height: 0.95;
   color: var(--tax-ink);
 }
@@ -670,17 +672,17 @@ section.bg-3 .aside-callout, section.bg-2 .aside-callout {
   margin-bottom: 18px;
 }
 .aside-callout h3 {
-  font-size: clamp(28px, 4vw, 44px);
-  line-height: 1.1;
-  letter-spacing: -0.025em;
-  max-width: 900px;
-  margin: 0 auto 22px;
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.18;
+  letter-spacing: -0.022em;
+  max-width: 720px;
+  margin: 0 auto 18px;
 }
 .aside-callout p {
-  font-size: clamp(16px, 1.8vw, 19px);
-  line-height: 1.48;
+  font-size: clamp(14px, 1.5vw, 17px);
+  line-height: 1.55;
   color: var(--ink-3);
-  max-width: 720px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -708,15 +710,15 @@ section.bg-3 .aside-callout, section.bg-2 .aside-callout {
   margin-bottom: 14px;
 }
 .mentor-card h4 {
-  font-size: clamp(20px, 2.4vw, 26px);
-  letter-spacing: -0.02em;
-  margin-bottom: 12px;
+  font-size: clamp(17px, 2vw, 21px);
+  letter-spacing: -0.018em;
+  margin-bottom: 10px;
   color: #f5f5f7;
 }
 .mentor-card p {
-  font-size: 14px;
+  font-size: 13.5px;
   color: #a1a1a6;
-  line-height: 1.5;
+  line-height: 1.55;
   margin: 0;
 }
 
@@ -778,9 +780,9 @@ section.bg-3 .aside-callout, section.bg-2 .aside-callout {
   text-align: center;
 }
 .sl .n {
-  font-size: clamp(40px, 5.5vw, 72px);
+  font-size: clamp(32px, 4vw, 52px);
   font-weight: 700;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.035em;
   line-height: 1;
   color: var(--ink);
   margin-bottom: 8px;
@@ -918,9 +920,9 @@ footer .container a:hover { color: var(--ink); }
 
     <div class="members">
       <div class="m-card reveal">
-        <div class="avatar">A</div>
+        <div class="avatar">민</div>
         <div class="role">Backend · Infra</div>
-        <div class="name">[멤버 1]</div>
+        <div class="name">김민준</div>
         <div class="stack">Spring · Node · Kubernetes<br/>PostgreSQL · AWS · Kafka · Redis</div>
         <div class="focus">FOCUS · 운영 가능한 MVP 아키텍처</div>
         <div class="bio">대규모 트래픽·실시간 처리 경험. 로컬에서만 도는 데모가 아니라 첫날부터 운영을 가정한 시스템을 짭니다.</div>
@@ -928,9 +930,9 @@ footer .container a:hover { color: var(--ink); }
       </div>
 
       <div class="m-card reveal">
-        <div class="avatar">B</div>
+        <div class="avatar">서</div>
         <div class="role">AI · Data</div>
-        <div class="name">[멤버 2]</div>
+        <div class="name">이서연</div>
         <div class="stack">LLM · RAG · Python<br/>PyTorch · Vector DB · ML Ops</div>
         <div class="focus">FOCUS · 프로덕션 LLM 파이프라인</div>
         <div class="bio">도메인 RAG·평가 체계·환각 방지 디자인의 책임자. "정확한가, 빠른가, 싼가" 세 축을 동시에 봅니다.</div>
@@ -938,9 +940,9 @@ footer .container a:hover { color: var(--ink); }
       </div>
 
       <div class="m-card reveal">
-        <div class="avatar">C</div>
+        <div class="avatar">지</div>
         <div class="role">Product · Frontend</div>
-        <div class="name">[멤버 3]</div>
+        <div class="name">박지호</div>
         <div class="stack">React · Next.js · React Native<br/>Figma · Mixpanel · Amplitude</div>
         <div class="focus">FOCUS · 가설 → 사용자 검증</div>
         <div class="bio">페인포인트 인터뷰부터 와이어프레임·구현·사용자 행동 분석까지. 가설을 가장 짧은 사이클로 사용자 앞에 가져다 놓습니다.</div>
