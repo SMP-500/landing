@@ -3,23 +3,21 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="description" content="SW Maestro 17기 · 3인 팀 소개. 실유저와 수익화를 1순위로 두는 팀, 그리고 지금 탐색 중인 아이디어들." />
-<meta property="og:title" content="Team · SW Maestro 17기" />
-<meta property="og:description" content="유저 한 명, 매출 한 줄. 그 외엔 부수적입니다." />
-<title>Team · SW Maestro 17기</title>
+<meta name="description" content="ASM 17기 · 팀 SMP 500 — 잘 만드는 팀은 많습니다. 우리는 쓰게 만드는 팀입니다." />
+<meta property="og:title" content="팀 SMP 500 · ASM 17기" />
+<meta property="og:description" content="잘 만드는 팀은 많습니다. 우리는 쓰게 만드는 팀입니다." />
+<title>팀 SMP 500 · ASM 17기</title>
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
 
 <style>
 /* ====================================================================
-   Landing — Apple homepage aesthetic, single file, GitHub Pages ready
-   Reference grammar: apple.com/iphone & apple.com/mac
-   Pure CSS, no JS, no buttons. Just information.
+   Landing — Apple homepage aesthetic
+   Team SMP 500 · ASM 17기
    ==================================================================== */
 
 :root {
-  /* Apple's actual values */
   --ink:        #1d1d1f;
   --ink-2:      #2a2a2c;
   --ink-3:      #424245;
@@ -29,20 +27,12 @@
   --line-soft:  #e8e8ed;
 
   --bg:         #ffffff;
-  --bg-2:       #fbfbfd;     /* Apple's almost-white background */
-  --bg-3:       #f5f5f7;     /* Apple's main gray background */
-  --bg-dark:    #000000;     /* Apple uses pure black for dark sections */
+  --bg-2:       #fbfbfd;
+  --bg-3:       #f5f5f7;
+  --bg-dark:    #000000;
   --bg-dark-2:  #161617;
 
-  --accent:     #0071e3;     /* Apple's link blue */
-
-  /* Idea palettes — very restrained */
-  --wedding-1:  #faf3ef;
-  --wedding-2:  #e8d5cc;
-  --wedding-ink:#3b2118;
-  --tax-1:      #f0f2f7;
-  --tax-2:      #cbd5e4;
-  --tax-ink:    #1a2440;
+  --accent:     #0071e3;
 
   --max: 1200px;
   --max-narrow: 960px;
@@ -69,14 +59,11 @@ body {
   overflow-x: hidden;
 }
 
-/* =====================================================================
-   Sticky nav — Apple's exact pattern
-   ===================================================================== */
+/* ===================================================================== */
+/* Sticky nav                                                            */
+/* ===================================================================== */
 .global-nav {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-  height: 44px;
+  position: sticky; top: 0; z-index: 9999; height: 44px;
   background: rgba(251, 251, 253, 0.72);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -84,79 +71,57 @@ body {
 }
 .global-nav-inner {
   max-width: var(--max);
-  height: 100%;
-  margin: 0 auto;
+  height: 100%; margin: 0 auto;
   padding: 0 var(--gutter);
-  display: flex;
-  align-items: center;
+  display: flex; align-items: center;
   gap: clamp(20px, 4vw, 40px);
-  font-size: 12px;
-  color: var(--ink);
 }
 .global-nav .brand {
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: -0.01em;
-  color: var(--ink);
+  font-weight: 600; font-size: 14px;
+  letter-spacing: -0.01em; color: var(--ink);
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: flex; align-items: center; gap: 8px;
 }
 .global-nav .brand::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: var(--ink);
+  content: ""; width: 7px; height: 7px;
+  border-radius: 999px; background: var(--ink);
   display: inline-block;
 }
 .global-nav .links {
-  display: flex;
-  gap: clamp(16px, 3vw, 28px);
-  font-size: 12px;
-  color: var(--ink-3);
+  display: flex; gap: clamp(16px, 3vw, 28px);
+  font-size: 12px; color: var(--ink-3);
   margin-left: auto;
 }
 .global-nav .links a {
-  color: var(--ink-3);
-  text-decoration: none;
-  letter-spacing: -0.005em;
-  transition: color .2s;
+  color: var(--ink-3); text-decoration: none;
+  letter-spacing: -0.005em; transition: color .2s;
 }
 .global-nav .links a:hover { color: var(--ink); }
 @media (max-width: 720px) {
-  .global-nav .links { gap: 14px; font-size: 11px; }
+  .global-nav .links { gap: 12px; font-size: 11px; }
 }
 
-/* =====================================================================
-   Hero — Apple's product page hero structure
-   ===================================================================== */
+/* ===================================================================== */
+/* Hero                                                                  */
+/* ===================================================================== */
 .hero {
   background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
-  padding: clamp(100px, 14vw, 180px) var(--gutter) clamp(80px, 12vw, 140px);
+  padding: clamp(100px, 14vw, 180px) var(--gutter) clamp(80px, 11vw, 130px);
   text-align: center;
-  position: relative;
 }
 .hero .eyebrow {
-  font-size: clamp(13px, 1.4vw, 16px);
-  line-height: 1.2;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--ink-4);
-  margin: 0 0 14px;
+  font-size: clamp(12px, 1.3vw, 14px);
+  line-height: 1.2; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--ink-4); margin: 0 0 18px;
 }
 .hero h1 {
-  font-size: clamp(38px, 6.5vw, 72px);
-  line-height: 1.07;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  margin: 0 0 clamp(16px, 2vw, 24px);
+  font-size: clamp(34px, 5.5vw, 64px);
+  line-height: 1.08; font-weight: 700;
+  letter-spacing: -0.035em;
+  margin: 0 auto clamp(20px, 2.5vw, 28px);
   color: var(--ink);
-  max-width: 16ch;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 18ch;
 }
 .hero h1 .grad {
   background: linear-gradient(90deg, #1d1d1f 0%, #6e6e73 100%);
@@ -166,54 +131,38 @@ body {
   white-space: nowrap;
 }
 .hero .lede {
-  font-size: clamp(16px, 1.7vw, 21px);
-  line-height: 1.45;
-  font-weight: 500;
-  letter-spacing: 0.004em;
+  font-size: clamp(16px, 1.7vw, 20px);
+  line-height: 1.5; font-weight: 500;
+  letter-spacing: 0.002em;
   color: var(--ink-3);
-  max-width: 680px;
-  margin: 0 auto clamp(40px, 5vw, 64px);
+  max-width: 640px;
+  margin: 0 auto clamp(40px, 5vw, 60px);
 }
 .hero .meta {
-  font-size: 14px;
-  color: var(--ink-4);
-  display: flex;
-  justify-content: center;
-  gap: clamp(12px, 2vw, 22px);
-  flex-wrap: wrap;
-  letter-spacing: -0.005em;
+  font-size: 13px; color: var(--ink-4);
+  display: flex; justify-content: center;
+  gap: clamp(10px, 1.8vw, 20px);
+  flex-wrap: wrap; letter-spacing: -0.005em;
 }
 .hero .meta .dot { color: var(--line); }
 
-/* =====================================================================
-   Section base
-   ===================================================================== */
-section {
-  padding: clamp(90px, 12vw, 140px) var(--gutter);
-}
+/* ===================================================================== */
+/* Section base                                                          */
+/* ===================================================================== */
+section { padding: clamp(80px, 11vw, 130px) var(--gutter); }
 section.bg-2 { background: var(--bg-2); }
 section.bg-3 { background: var(--bg-3); }
-section.dark {
-  background: var(--bg-dark);
-  color: #f5f5f7;
-}
+section.dark { background: var(--bg-dark); color: #f5f5f7; }
 section.dark h2, section.dark h3, section.dark h4 { color: #f5f5f7; }
 section.dark p, section.dark .lede { color: #a1a1a6; }
 
-.container {
-  max-width: var(--max);
-  margin: 0 auto;
-}
-.container-narrow {
-  max-width: var(--max-narrow);
-  margin: 0 auto;
-}
+.container { max-width: var(--max); margin: 0 auto; }
+.container-narrow { max-width: var(--max-narrow); margin: 0 auto; }
 
-/* Apple-style section heading */
 .s-head {
   text-align: center;
-  max-width: 980px;
-  margin: 0 auto clamp(56px, 7vw, 88px);
+  max-width: 820px;
+  margin: 0 auto clamp(48px, 6vw, 72px);
 }
 .s-head .kicker {
   font-size: clamp(12px, 1.2vw, 14px);
@@ -224,65 +173,171 @@ section.dark p, section.dark .lede { color: #a1a1a6; }
   margin-bottom: clamp(12px, 1.5vw, 16px);
 }
 section.dark .s-head .kicker { color: #86868b; }
+
 h2 {
-  font-size: clamp(28px, 4.5vw, 52px);
-  line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: -0.035em;
+  font-size: clamp(26px, 4vw, 44px);
+  line-height: 1.12; font-weight: 700;
+  letter-spacing: -0.03em;
   margin: 0 0 clamp(12px, 1.5vw, 18px);
   color: var(--ink);
 }
 h3 {
-  font-size: clamp(20px, 2.6vw, 28px);
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: -0.022em;
-  margin: 0 0 10px;
+  font-size: clamp(19px, 2.4vw, 26px);
+  line-height: 1.2; font-weight: 700;
+  letter-spacing: -0.02em; margin: 0 0 10px;
 }
 h4 {
   font-size: clamp(15px, 1.6vw, 18px);
-  line-height: 1.35;
-  font-weight: 600;
-  letter-spacing: -0.012em;
-  margin: 0 0 8px;
+  line-height: 1.35; font-weight: 600;
+  letter-spacing: -0.012em; margin: 0 0 8px;
 }
 .lede {
-  font-size: clamp(16px, 1.8vw, 21px);
-  line-height: 1.45;
-  font-weight: 500;
+  font-size: clamp(15px, 1.7vw, 20px);
+  line-height: 1.5; font-weight: 500;
   letter-spacing: 0.004em;
-  color: var(--ink-3);
-  margin: 0;
-}
-.body-l {
-  font-size: clamp(17px, 1.5vw, 19px);
-  line-height: 1.42105;
-  color: var(--ink-3);
-  letter-spacing: 0.012em;
+  color: var(--ink-3); margin: 0;
 }
 
-/* =====================================================================
-   Identity statement — Apple's big quote block
-   ===================================================================== */
+/* ===================================================================== */
+/* Identity                                                              */
+/* ===================================================================== */
 .identity {
   text-align: center;
-  max-width: 1080px;
+  max-width: 920px;
   margin: 0 auto;
-  padding: clamp(40px, 6vw, 80px) 0;
+  padding: clamp(20px, 4vw, 60px) 0;
 }
 .identity p {
-  font-size: clamp(26px, 4vw, 44px);
-  line-height: 1.18;
+  font-size: clamp(24px, 3.8vw, 40px);
+  line-height: 1.22;
   font-weight: 600;
   letter-spacing: -0.022em;
   color: var(--ink);
   margin: 0;
 }
 section.dark .identity p { color: #f5f5f7; }
+.identity .sub {
+  font-size: clamp(14px, 1.6vw, 17px);
+  color: var(--ink-4);
+  margin-top: 22px;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
 
-/* =====================================================================
-   Members — Apple "Meet the family" style cards
-   ===================================================================== */
+/* Photo placeholder for "in-person" identity */
+.photo-frame {
+  margin: clamp(48px, 7vw, 80px) auto 0;
+  max-width: 760px;
+  aspect-ratio: 16 / 10;
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, #efeae3 0%, #d8cfc4 50%, #b8a99a 100%);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+}
+.photo-frame::after {
+  content: "TEAM MEETING · OFFLINE";
+  position: absolute;
+  bottom: 20px; left: 24px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: rgba(60, 40, 30, 0.5);
+}
+.photo-frame .glyph {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(60, 40, 30, 0.18);
+  font-size: clamp(80px, 12vw, 140px);
+  font-weight: 200;
+  letter-spacing: -0.06em;
+}
+
+/* ===================================================================== */
+/* Characteristics — 4 cards                                             */
+/* ===================================================================== */
+.chars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(14px, 1.5vw, 22px);
+}
+@media (max-width: 720px) {
+  .chars { grid-template-columns: 1fr; }
+}
+.char {
+  background: var(--bg);
+  border-radius: 24px;
+  padding: clamp(28px, 3.5vw, 40px);
+  position: relative;
+}
+.char::before {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: 24px;
+  border: 1px solid rgba(0,0,0,0.04);
+  pointer-events: none;
+}
+.char .n {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink-4);
+  margin-bottom: 14px;
+}
+.char h3 {
+  font-size: clamp(18px, 2vw, 22px);
+  letter-spacing: -0.018em;
+  margin-bottom: 12px;
+}
+.char p {
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.55;
+  margin: 0;
+  letter-spacing: -0.005em;
+}
+
+/* ===================================================================== */
+/* Direction table                                                       */
+/* ===================================================================== */
+.dir-table {
+  max-width: 820px;
+  margin: 0 auto;
+  background: var(--bg);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.dir-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  border-bottom: 1px solid var(--line-soft);
+}
+.dir-row:last-child { border-bottom: none; }
+.dir-row .k {
+  padding: 18px 24px;
+  background: var(--bg-3);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--ink-2);
+}
+.dir-row .v {
+  padding: 18px 24px;
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+}
+@media (max-width: 640px) {
+  .dir-row { grid-template-columns: 1fr; }
+  .dir-row .k { padding-bottom: 4px; }
+  .dir-row .v { padding-top: 8px; }
+}
+
+/* ===================================================================== */
+/* Members                                                               */
+/* ===================================================================== */
 .members {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -292,40 +347,32 @@ section.dark .identity p { color: #f5f5f7; }
 
 .m-card {
   background: var(--bg);
-  border-radius: 28px;
-  padding: clamp(40px, 5vw, 56px) clamp(32px, 4vw, 44px);
+  border-radius: 24px;
+  padding: clamp(32px, 3.5vw, 44px) clamp(28px, 3vw, 36px);
   text-align: center;
   position: relative;
-  overflow: hidden;
 }
-section.bg-3 .m-card,
-section.bg-2 .m-card { background: var(--bg); }
 .m-card::before {
   content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 28px;
+  position: absolute; inset: 0;
+  border-radius: 24px;
   border: 1px solid rgba(0,0,0,0.04);
   pointer-events: none;
 }
 .m-card .avatar {
-  width: 76px;
-  height: 76px;
+  width: 72px; height: 72px;
   border-radius: 50%;
   background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; font-weight: 700;
   color: var(--ink);
-  margin: 0 auto 22px;
+  margin: 0 auto 20px;
   letter-spacing: -0.03em;
 }
 .m-card .role {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-4);
   margin-bottom: 8px;
@@ -333,7 +380,7 @@ section.bg-2 .m-card { background: var(--bg); }
 .m-card .name {
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.018em;
   margin-bottom: 14px;
 }
 .m-card .stack {
@@ -343,467 +390,310 @@ section.bg-2 .m-card { background: var(--bg); }
   margin-bottom: 18px;
   line-height: 1.55;
 }
-.m-card .focus {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: -0.005em;
-  color: var(--ink-2);
-  background: var(--bg-3);
-  padding: 6px 12px;
-  border-radius: 999px;
-  margin-bottom: 14px;
-}
 .m-card .bio {
-  font-size: 13.5px;
+  font-size: 13px;
   color: var(--ink-3);
-  letter-spacing: -0.005em;
   line-height: 1.55;
   margin-bottom: 22px;
 }
 .m-card .quote {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--ink);
   font-weight: 500;
-  letter-spacing: -0.015em;
-  line-height: 1.4;
+  letter-spacing: -0.012em;
+  line-height: 1.45;
   border-top: 1px solid rgba(0,0,0,0.08);
   padding-top: 22px;
   font-style: italic;
 }
 
-/* =====================================================================
-   Bento grid — Apple's iPhone/Mac product feature bento
-   ===================================================================== */
-.bento {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: clamp(14px, 1.4vw, 22px);
-  grid-auto-rows: minmax(220px, auto);
-}
-@media (max-width: 880px) {
-  .bento { grid-template-columns: 1fr; grid-auto-rows: auto; }
-}
-
-.b {
-  background: var(--bg);
-  border-radius: 28px;
-  padding: clamp(28px, 3vw, 40px);
-  position: relative;
-  overflow: hidden;
-}
-.b::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 28px;
-  border: 1px solid rgba(0,0,0,0.04);
-  pointer-events: none;
-}
-.b .b-eye {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-4);
-  margin-bottom: 14px;
-}
-.b h3 {
-  font-size: clamp(18px, 2vw, 24px);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin-bottom: 10px;
-}
-.b p {
-  font-size: 14px;
-  color: var(--ink-3);
-  line-height: 1.5;
-  letter-spacing: -0.005em;
-  margin: 0;
-}
-
-/* Bento layout — like Apple iPhone bento */
-.b-1 { grid-column: span 4; }
-.b-2 { grid-column: span 2; }
-.b-3 { grid-column: span 2; }
-.b-4 { grid-column: span 2; }
-.b-5 { grid-column: span 2; }
-.b-6 { grid-column: span 3; }
-.b-7 { grid-column: span 3; }
-@media (max-width: 880px) {
-  .b-1, .b-2, .b-3, .b-4, .b-5, .b-6, .b-7 { grid-column: span 1; }
-}
-
-/* =====================================================================
-   Idea showcase — Apple product page "Get to know it" pattern
-   ===================================================================== */
-.showcase {
+/* ===================================================================== */
+/* Journey (세무 AI pivot story)                                          */
+/* ===================================================================== */
+.journey-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(40px, 7vw, 96px);
-  align-items: center;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
 }
 @media (max-width: 880px) {
-  .showcase { grid-template-columns: 1fr; }
+  .journey-grid { grid-template-columns: 1fr; }
 }
-.showcase .copy h2 {
-  font-size: clamp(26px, 4vw, 44px);
-  line-height: 1.12;
-}
-.showcase .copy .lede {
-  font-size: clamp(15px, 1.6vw, 18px);
-  line-height: 1.5;
-  color: var(--ink-3);
-  margin-bottom: 24px;
-}
-.showcase .copy .pts {
-  list-style: none;
-  margin: 32px 0 0;
-  padding: 0;
-}
-.showcase .copy .pts li {
-  padding: 16px 0;
-  border-top: 1px solid rgba(0,0,0,0.08);
-  font-size: 16px;
-  letter-spacing: -0.005em;
-  color: var(--ink-2);
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 16px;
-}
-section.dark .showcase .copy .pts li { border-top-color: rgba(255,255,255,0.12); color: #d2d2d7; }
-.showcase .copy .pts li:last-child { border-bottom: 1px solid rgba(0,0,0,0.08); }
-section.dark .showcase .copy .pts li:last-child { border-bottom-color: rgba(255,255,255,0.12); }
-.showcase .copy .pts li .key {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-4);
-  padding-top: 2px;
-}
-
-/* =====================================================================
-   Visual: wedding — photo grid that visualizes "10,000 photos → 50"
-   ===================================================================== */
-.wedding-visual {
-  background: linear-gradient(180deg, var(--wedding-1) 0%, var(--wedding-2) 100%);
-  border-radius: 32px;
-  padding: clamp(36px, 5vw, 56px);
-  aspect-ratio: 1 / 1;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-}
-.wedding-visual .tag {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--wedding-ink);
-  opacity: 0.7;
-  margin-bottom: 18px;
-}
-.wedding-visual .phot-grid {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  gap: 3px;
-  position: relative;
-}
-.wedding-visual .phot-grid > div {
-  background: rgba(255,255,255,0.55);
-  border-radius: 2px;
-}
-.wedding-visual .phot-grid > div.picked {
-  background: var(--wedding-ink);
-  outline: 2px solid var(--wedding-ink);
-  outline-offset: 1px;
-}
-.wedding-visual .stat-overlay {
-  position: absolute;
-  bottom: clamp(28px, 4vw, 48px);
-  left: clamp(28px, 4vw, 48px);
-  right: clamp(28px, 4vw, 48px);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  pointer-events: none;
-}
-.wedding-visual .stat-overlay .col .n {
-  font-size: clamp(32px, 4.5vw, 52px);
-  font-weight: 800;
-  letter-spacing: -0.035em;
-  line-height: 0.95;
-  color: var(--wedding-ink);
-}
-.wedding-visual .stat-overlay .col .l {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--wedding-ink);
-  opacity: 0.7;
-  letter-spacing: 0.02em;
-  margin-top: 6px;
-}
-.wedding-visual .stat-overlay .arrow {
-  font-size: 36px;
-  font-weight: 300;
-  color: var(--wedding-ink);
-  opacity: 0.4;
-  align-self: center;
-  margin: 0 12px;
-}
-
-/* =====================================================================
-   Visual: tax AI — document flow
-   ===================================================================== */
-.tax-visual {
-  background: linear-gradient(180deg, var(--tax-1) 0%, var(--tax-2) 100%);
-  border-radius: 32px;
-  padding: clamp(36px, 5vw, 56px);
-  aspect-ratio: 1 / 1;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-}
-.tax-visual .tag {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--tax-ink);
-  opacity: 0.7;
-  margin-bottom: 22px;
-}
-.tax-visual .stack-docs {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.tax-visual .doc {
-  position: absolute;
-  width: 50%;
-  aspect-ratio: 7 / 9;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(26,36,64,0.15);
-  display: flex;
-  flex-direction: column;
-  padding: 14px;
-  gap: 4px;
-}
-.tax-visual .doc::before {
-  content: "";
-  width: 60%;
-  height: 6px;
-  background: var(--tax-ink);
-  opacity: 0.85;
-  border-radius: 2px;
-  margin-bottom: 10px;
-}
-.tax-visual .doc .ln {
-  background: rgba(26,36,64,0.18);
-  height: 5px;
-  border-radius: 2px;
-}
-.tax-visual .doc .ln.short { width: 70%; }
-.tax-visual .doc .ln.mid   { width: 85%; }
-.tax-visual .doc .ln.long  { width: 95%; }
-.tax-visual .doc.d1 { transform: rotate(-8deg) translate(-32%, -2%); }
-.tax-visual .doc.d2 { transform: rotate(-2deg) translate(-8%, 4%); z-index: 2; }
-.tax-visual .doc.d3 { transform: rotate(5deg) translate(18%, -3%); }
-.tax-visual .ai-mark {
-  position: absolute;
-  bottom: clamp(28px, 4vw, 48px);
-  right: clamp(28px, 4vw, 48px);
-  background: var(--tax-ink);
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-.tax-visual .stat-overlay {
-  position: absolute;
-  bottom: clamp(28px, 4vw, 48px);
-  left: clamp(28px, 4vw, 48px);
-  pointer-events: none;
-}
-.tax-visual .stat-overlay .n {
-  font-size: clamp(32px, 4.5vw, 52px);
-  font-weight: 800;
-  letter-spacing: -0.035em;
-  line-height: 0.95;
-  color: var(--tax-ink);
-}
-.tax-visual .stat-overlay .l {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--tax-ink);
-  opacity: 0.7;
-  letter-spacing: 0.02em;
-  margin-top: 6px;
-}
-
-/* =====================================================================
-   "Still exploring" callout — Apple-style aside section
-   ===================================================================== */
-.aside-callout {
-  background: var(--bg);
-  border-radius: 28px;
-  padding: clamp(48px, 6vw, 80px) clamp(32px, 5vw, 64px);
-  text-align: center;
-}
-section.bg-3 .aside-callout, section.bg-2 .aside-callout {
-  background: var(--bg);
-}
-.aside-callout .small-eye {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-4);
-  margin-bottom: 18px;
-}
-.aside-callout h3 {
-  font-size: clamp(22px, 3vw, 34px);
-  line-height: 1.18;
+.journey-copy h3 {
+  font-size: clamp(22px, 3vw, 32px);
   letter-spacing: -0.022em;
-  max-width: 720px;
-  margin: 0 auto 18px;
-}
-.aside-callout p {
-  font-size: clamp(14px, 1.5vw, 17px);
-  line-height: 1.55;
-  color: var(--ink-3);
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-/* =====================================================================
-   Mentor block — kept short, info only, no buttons
-   ===================================================================== */
-.mentor-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(14px, 1.4vw, 22px);
-}
-@media (max-width: 880px) { .mentor-grid { grid-template-columns: 1fr; } }
-.mentor-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 28px;
-  padding: clamp(28px, 3.5vw, 44px);
-}
-.mentor-card .lab {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #86868b;
   margin-bottom: 14px;
 }
-.mentor-card h4 {
+.journey-copy p {
+  font-size: 15px;
+  color: var(--ink-3);
+  line-height: 1.6;
+  letter-spacing: -0.005em;
+  margin: 0 0 14px;
+}
+.journey-copy p:last-child { margin-bottom: 0; }
+.journey-copy .em {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.exp-card {
+  background: var(--bg);
+  border-radius: 24px;
+  padding: clamp(32px, 4vw, 44px);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.exp-card .status {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  background: var(--bg-3);
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+.exp-card .status.active {
+  background: #e7f0ff;
+  color: var(--accent);
+}
+.exp-card h3 {
+  font-size: clamp(20px, 2.4vw, 26px);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.exp-card p {
+  font-size: 14.5px;
+  color: var(--ink-3);
+  line-height: 1.6;
+  letter-spacing: -0.005em;
+  margin: 0 0 12px;
+}
+.exp-card .em {
+  color: var(--ink);
+  font-weight: 600;
+}
+.exp-card .status-list {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-soft);
+}
+.exp-card .status-list .row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 14px;
+  padding: 8px 0;
+  font-size: 13px;
+}
+.exp-card .status-list .row .k {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  padding-top: 3px;
+}
+.exp-card .status-list .row .v {
+  color: var(--ink-2);
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+}
+
+.journey-note {
+  text-align: center;
+  max-width: 720px;
+  margin: clamp(40px, 5vw, 56px) auto 0;
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.6;
+  letter-spacing: -0.005em;
+}
+
+.lesson-card {
+  background: var(--bg);
+  border-radius: 24px;
+  padding: clamp(28px, 3.5vw, 40px);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.lesson-card h4 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin-bottom: 18px;
+}
+.lesson-card ul {
+  list-style: none; padding: 0; margin: 0;
+}
+.lesson-card ul li {
+  padding: 14px 0;
+  border-top: 1px solid var(--line-soft);
+  font-size: 14px;
+  color: var(--ink-3);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  letter-spacing: -0.005em;
+}
+.lesson-card ul li:first-of-type { border-top: none; padding-top: 0; }
+.lesson-card ul li .k {
+  font-weight: 600;
+  color: var(--ink);
+}
+.lesson-card ul li .v {
+  color: var(--ink-3);
+  line-height: 1.5;
+}
+
+/* ===================================================================== */
+/* Mentor / Attitude grid                                                */
+/* ===================================================================== */
+.mg-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(14px, 1.5vw, 22px);
+}
+@media (max-width: 720px) { .mg-grid { grid-template-columns: 1fr; } }
+
+.mg {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: clamp(28px, 3.5vw, 40px);
+}
+section:not(.dark) .mg {
+  background: var(--bg);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.mg .lab {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #86868b;
+  margin-bottom: 12px;
+}
+section:not(.dark) .mg .lab { color: var(--ink-4); }
+.mg h4 {
   font-size: clamp(17px, 2vw, 21px);
   letter-spacing: -0.018em;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #f5f5f7;
 }
-.mentor-card p {
-  font-size: 13.5px;
+section:not(.dark) .mg h4 { color: var(--ink); }
+.mg p {
+  font-size: 14px;
   color: #a1a1a6;
   line-height: 1.55;
   margin: 0;
+  letter-spacing: -0.005em;
+}
+section:not(.dark) .mg p { color: var(--ink-3); }
+
+/* Attitude — 3 column layout */
+.attitude {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 1.5vw, 22px);
+}
+@media (max-width: 880px) { .attitude { grid-template-columns: 1fr; } }
+
+/* ===================================================================== */
+/* Stack & Ground rules                                                  */
+/* ===================================================================== */
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(14px, 1.5vw, 22px);
+}
+@media (max-width: 720px) { .stack-grid { grid-template-columns: 1fr; } }
+
+.sk {
+  background: var(--bg);
+  border-radius: 24px;
+  padding: clamp(28px, 3.5vw, 40px);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.sk .lab {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin-bottom: 12px;
+}
+.sk h4 {
+  font-size: 17px;
+  letter-spacing: -0.018em;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+.sk .items {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.sk .items span {
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--bg-3);
+  color: var(--ink-2);
+  padding: 6px 12px;
+  border-radius: 999px;
+  letter-spacing: -0.005em;
 }
 
-/* =====================================================================
-   Process strip — pain → BM
-   ===================================================================== */
-.proc-strip {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: clamp(10px, 1vw, 14px);
+.ground {
+  margin-top: clamp(48px, 6vw, 72px);
+  background: var(--ink);
+  color: #f5f5f7;
+  border-radius: 28px;
+  padding: clamp(40px, 5vw, 60px);
 }
-@media (max-width: 880px) { .proc-strip { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .proc-strip { grid-template-columns: 1fr; } }
-.proc {
-  background: var(--bg);
-  border-radius: 18px;
-  padding: clamp(20px, 2vw, 28px);
+.ground h3 {
+  color: #f5f5f7;
+  margin-bottom: 28px;
+}
+.ground ol {
+  list-style: none; padding: 0; margin: 0;
+  counter-reset: g;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 36px);
+}
+@media (max-width: 720px) { .ground ol { grid-template-columns: 1fr; } }
+.ground ol li {
+  counter-increment: g;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.18);
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+  letter-spacing: -0.005em;
   position: relative;
 }
-.proc::before {
-  content: "";
+.ground ol li::before {
+  content: counter(g, decimal-leading-zero);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #6ea8ff;
   position: absolute;
-  inset: 0;
-  border-radius: 18px;
-  border: 1px solid rgba(0,0,0,0.04);
-  pointer-events: none;
+  top: -20px; left: 0;
 }
-.proc .step {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--ink-4);
-}
-.proc h4 {
+.ground ol li strong {
+  display: block;
+  color: #f5f5f7;
   font-size: 16px;
-  line-height: 1.25;
-  margin: 8px 0 6px;
-  letter-spacing: -0.012em;
-}
-.proc p {
-  font-size: 12.5px;
-  color: var(--ink-4);
-  line-height: 1.46;
-  margin: 0;
-}
-
-/* =====================================================================
-   Stats inline
-   ===================================================================== */
-.stat-line {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(20px, 3vw, 40px);
-  max-width: 980px;
-  margin: 0 auto;
-}
-@media (max-width: 720px) { .stat-line { grid-template-columns: repeat(2, 1fr); } }
-.sl {
-  text-align: center;
-}
-.sl .n {
-  font-size: clamp(32px, 4vw, 52px);
-  font-weight: 700;
-  letter-spacing: -0.035em;
-  line-height: 1;
-  color: var(--ink);
-  margin-bottom: 8px;
-}
-section.dark .sl .n { color: #f5f5f7; }
-.sl .n .u {
-  font-size: 0.35em;
-  color: var(--ink-4);
+  letter-spacing: -0.018em;
+  margin-bottom: 6px;
   font-weight: 600;
-  margin-left: 4px;
-}
-.sl .l {
-  font-size: 13px;
-  color: var(--ink-4);
-  letter-spacing: -0.005em;
-  line-height: 1.5;
 }
 
-/* =====================================================================
-   Footer — Apple style mini
-   ===================================================================== */
+/* ===================================================================== */
+/* Footer                                                                */
+/* ===================================================================== */
 footer {
   background: var(--bg-3);
   padding: clamp(40px, 5vw, 56px) var(--gutter);
@@ -824,14 +714,13 @@ footer .container a {
 }
 footer .container a:hover { color: var(--ink); }
 
-/* =====================================================================
-   Scroll reveal (CSS only, modern browsers)
-   ===================================================================== */
+/* ===================================================================== */
+/* Scroll reveal                                                         */
+/* ===================================================================== */
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    animation: rise 0.9s cubic-bezier(0.28, 0.11, 0.32, 1) forwards;
+    opacity: 0; transform: translateY(20px);
+    animation: rise 0.85s cubic-bezier(0.28, 0.11, 0.32, 1) forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
   }
@@ -843,9 +732,6 @@ footer .container a:hover { color: var(--ink); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* =====================================================================
-   Print
-   ===================================================================== */
 @media print {
   .global-nav, footer { display: none; }
   section, .hero { padding: 24px 0; break-inside: avoid; }
@@ -854,438 +740,366 @@ footer .container a:hover { color: var(--ink); }
 </head>
 <body>
 
-<!-- ====================================================================
-     GLOBAL NAV (Apple style — single line, blurred)
-     ==================================================================== -->
+<!-- NAV -->
 <nav class="global-nav">
   <div class="global-nav-inner">
-    <a class="brand" href="#top">Team</a>
+    <a class="brand" href="#top">SMP 500</a>
     <div class="links">
-      <a href="#identity">팀</a>
-      <a href="#members">멤버</a>
-      <a href="#how">우리가 일하는 법</a>
-      <a href="#ideas">탐색 중인 아이디어</a>
+      <a href="#identity">정체성</a>
+      <a href="#chars">특징</a>
+      <a href="#members">팀원</a>
+      <a href="#journey">우리의 흔적</a>
       <a href="#mentor">멘토</a>
     </div>
   </div>
 </nav>
 
-<!-- ====================================================================
-     HERO
-     ==================================================================== -->
+<!-- HERO -->
 <header class="hero" id="top">
   <div class="container-narrow">
-    <p class="eyebrow">SW Maestro 17기</p>
-    <h1>유저 한 명,<br/>매출 한 줄.<br/><span class="grad">그 외엔 부수적입니다.</span></h1>
+    <p class="eyebrow">ASM 17기 · 팀 SMP 500</p>
+    <h1>잘 만드는 팀은 많습니다.<br/>우리는 <span class="grad">쓰게 만드는 팀</span>입니다.</h1>
     <p class="lede">
-      페인포인트에서 출발해, 실유저로 검증하고, 비즈니스 모델로 끝맺습니다.<br/>
-      기술은 도구입니다. 우리가 만드는 건 사람들이 매일 여는 제품입니다.
+      코드 퀄리티·아키텍처·기술 스택, 다 중요합니다. 그러나 우리의 목표는 단 하나.<br/>
+      <strong style="color:var(--ink);">실제 사용자가 겪는 진짜 문제를 찾아, 직접 쓰고 떠나지 않는 제품을 만드는 것.</strong>
     </p>
     <div class="meta">
       <span>3인 팀</span>
       <span class="dot">·</span>
-      <span>Backend · AI · Product</span>
+      <span>Front 1 · Back 2 (AI 겸업)</span>
       <span class="dot">·</span>
-      <span>2026</span>
+      <span>2026 ASM 17기</span>
     </div>
   </div>
 </header>
 
-<!-- ====================================================================
-     IDENTITY — Apple style big quote
-     ==================================================================== -->
+<!-- IDENTITY -->
 <section id="identity" class="bg-2">
   <div class="container-narrow">
     <div class="identity reveal">
       <p>
-        멋있는 데모가 아니라,<br/>
-        매일 열어보는 제품을.<br/>
-        <br/>
-        기술의 깊이는 그 다음입니다.
+        가까이서 함께하고<br/>
+        비대면보다는 대면으로 소통하는<br/>
+        아날로그의 대명사.
       </p>
+      <div class="sub">— 멘토님과도 그렇게 가까이서 호흡하며 배우고 싶습니다.</div>
+    </div>
+
+    <div class="photo-frame reveal" aria-label="팀 미팅 사진 영역">
+      <div class="glyph">SMP</div>
     </div>
   </div>
 </section>
 
-<!-- ====================================================================
-     MEMBERS
-     ==================================================================== -->
+<!-- CHARACTERISTICS -->
+<section id="chars">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="kicker">팀의 특징</div>
+      <h2>우리가 매일 지키는<br/>네 가지 약속.</h2>
+      <p class="lede">소마 6개월 동안 증명하고 싶은 건 멋진 데모가 아니라 살아 움직이는 유저입니다.</p>
+    </div>
+
+    <div class="chars">
+      <div class="char reveal">
+        <div class="n">01 · 사용자 우선</div>
+        <h3>사용자가 먼저입니다.</h3>
+        <p>기술도, 아키텍처도 그다음입니다. "저희가 만들고 싶은 것"이 아니라 "사용자가 정말 필요로 하는 것"에서 출발합니다.</p>
+      </div>
+      <div class="char reveal">
+        <div class="n">02 · 정직한 공유</div>
+        <h3>정직하게,<br/>가공 없이 공유합니다.</h3>
+        <p>잘된 숫자도 부끄러운 숫자도 있는 그대로 보여드립니다. 포장된 보고서보다 진짜 현황을 함께 보는 것이 더 빠른 성장의 길이라 믿습니다.</p>
+      </div>
+      <div class="char reveal">
+        <div class="n">03 · 대면 소통</div>
+        <h3>가까이서, 얼굴을 마주하고 소통합니다.</h3>
+        <p>화면 너머의 메시지보다 얼굴을 마주한 대화의 힘을 믿는 팀입니다. 비대면이 편한 시대일수록, 자주 만나 깊이 소통하는 아날로그의 가치를 지킵니다.</p>
+      </div>
+      <div class="char reveal">
+        <div class="n">04 · 빠른 인정</div>
+        <h3>틀린 것을 빨리 인정하고<br/>빠르게 고칩니다.</h3>
+        <p>한 아이디어에 매몰되지 않습니다. "맞았다"를 증명하기보다 "틀렸다"를 빨리 아는 것을 더 중요하게 생각합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECTION TABLE -->
+<section class="bg-3">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="kicker">팀 방향성</div>
+      <h2>한 줄로 정리된 방향.</h2>
+    </div>
+
+    <div class="dir-table reveal">
+      <div class="dir-row">
+        <div class="k">핵심 목표</div>
+        <div class="v">실사용자 페인포인트 해결 → 유저 확보 + 리텐션</div>
+      </div>
+      <div class="dir-row">
+        <div class="k">출발점</div>
+        <div class="v">기술이 아니라 사용자의 문제</div>
+      </div>
+      <div class="dir-row">
+        <div class="k">성공 기준</div>
+        <div class="v">"완성했다"가 아니라 "유저가 쓴다"</div>
+      </div>
+      <div class="dir-row">
+        <div class="k">기본 노선</div>
+        <div class="v">취업 (팀원 전원 졸업생)</div>
+      </div>
+      <div class="dir-row">
+        <div class="k">창업 전환</div>
+        <div class="v">MVP 단계의 유저·리텐션·매출 등 데이터로 판단</div>
+      </div>
+      <div class="dir-row">
+        <div class="k">피봇</div>
+        <div class="v">반응이 없으면 빠르게 전환</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERS -->
 <section id="members">
   <div class="container">
     <div class="s-head reveal">
-      <div class="kicker">팀 멤버</div>
+      <div class="kicker">팀원</div>
       <h2>3명, 다른 무게중심.</h2>
-      <p class="lede">한 사람이 한 축을 깊게 책임지고, 의사결정은 세 명이 함께 합니다.</p>
+      <p class="lede">프론트엔드 1명, 백엔드 2명(AI 겸업 1명). 역할은 명확하되, 문제 앞에서는 경계 없이 움직이는 3인 개발팀.</p>
     </div>
 
     <div class="members">
       <div class="m-card reveal">
-        <div class="avatar">민</div>
-        <div class="role">Backend · Infra</div>
-        <div class="name">김민준</div>
-        <div class="stack">Spring · Node · Kubernetes<br/>PostgreSQL · AWS · Kafka · Redis</div>
-        <div class="focus">FOCUS · 운영 가능한 MVP 아키텍처</div>
-        <div class="bio">대규모 트래픽·실시간 처리 경험. 로컬에서만 도는 데모가 아니라 첫날부터 운영을 가정한 시스템을 짭니다.</div>
-        <p class="quote">"한 명이 들어와도, 십만 명이 들어와도<br/>안 무너지는 골격을."</p>
+        <div class="avatar">용</div>
+        <div class="role">Front-End</div>
+        <div class="name">안용수</div>
+        <div class="stack">React · Next.js<br/>백엔드와의 매끄러운 소통</div>
+        <div class="bio">유저가 쓰는 화면을 가장 가까이에서 책임집니다. 사용성·접근성·인터랙션을 우선으로 둡니다.</div>
+        <p class="quote">"유저의 입장에서<br/>사용성이 좋은 프론트엔드를 개발하겠습니다."</p>
       </div>
 
       <div class="m-card reveal">
-        <div class="avatar">서</div>
-        <div class="role">AI · Data</div>
-        <div class="name">이서연</div>
-        <div class="stack">LLM · RAG · Python<br/>PyTorch · Vector DB · ML Ops</div>
-        <div class="focus">FOCUS · 프로덕션 LLM 파이프라인</div>
-        <div class="bio">도메인 RAG·평가 체계·환각 방지 디자인의 책임자. "정확한가, 빠른가, 싼가" 세 축을 동시에 봅니다.</div>
-        <p class="quote">"AI는 데모가 아니라<br/>매일 검증되는 시스템이 되도록."</p>
+        <div class="avatar">혜</div>
+        <div class="role">Back-End</div>
+        <div class="name">오혜린</div>
+        <div class="stack">Spring Boot · 대용량 데이터<br/>안정성 · 확장성 지향</div>
+        <div class="bio">서비스의 뼈대가 흔들리지 않도록 책임지고 짭니다. 맡은 기능은 끝까지 끌고 갑니다.</div>
+        <p class="quote">"맡은 기능은 끝까지 책임지고,<br/>탄탄한 서버로 서비스의 뼈대를 지탱하겠습니다."</p>
       </div>
 
       <div class="m-card reveal">
-        <div class="avatar">지</div>
-        <div class="role">Product · Frontend</div>
-        <div class="name">박지호</div>
-        <div class="stack">React · Next.js · React Native<br/>Figma · Mixpanel · Amplitude</div>
-        <div class="focus">FOCUS · 가설 → 사용자 검증</div>
-        <div class="bio">페인포인트 인터뷰부터 와이어프레임·구현·사용자 행동 분석까지. 가설을 가장 짧은 사이클로 사용자 앞에 가져다 놓습니다.</div>
-        <p class="quote">"가설을 가장 짧은 거리로<br/>사용자에게 닿게."</p>
+        <div class="avatar">재</div>
+        <div class="role">Back-End · AI</div>
+        <div class="name">문재윤</div>
+        <div class="stack">인프라 · 백엔드<br/>AI 모델 서빙 · 파이프라인</div>
+        <div class="bio">도메인을 가리지 않는 빠른 기술 습득력. 백엔드와 AI 두 축을 같이 움직입니다.</div>
+        <p class="quote">"문제 해결에 필요하다면<br/>어떤 기술이든 빠르게 녹여내겠습니다."</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ====================================================================
-     HOW WE WORK — Bento grid (Apple iPhone feature bento)
-     ==================================================================== -->
-<section id="how" class="bg-3">
+<!-- JOURNEY — 여러 방향 탐색 중 -->
+<section id="journey" class="bg-2">
   <div class="container">
     <div class="s-head reveal">
-      <div class="kicker">우리가 일하는 법</div>
-      <h2>6가지 원칙.</h2>
-      <p class="lede">단 하나만 기억하라면 — "실유저와 수익화". 나머지는 거기서 파생됩니다.</p>
+      <div class="kicker">우리가 거쳐온 고민의 흔적</div>
+      <h2>지금, 여러 방향을<br/>동시에 보고 있습니다.</h2>
+      <p class="lede">한 가지에 매몰되지 않습니다. 페인이 명확한 영역과 입소문이 잘 도는 가벼운 영역을 함께 검토하면서, 결국엔 "유저가 붙을 수 있는가"를 기준으로 판단합니다.</p>
     </div>
 
-    <div class="bento">
-      <div class="b b-1 reveal">
-        <div class="b-eye">PRINCIPLE 01</div>
-        <h3>실유저와 수익화가 1순위입니다.</h3>
-        <p>기술을 만드는 프로젝트가 아닙니다. 사람이 들어오고 데이터가 쌓이고 돈이 도는 서비스를 만듭니다. 최종 평가의 단일 지표는 "매주 이 제품을 여는 사람이 몇 명인가, 결제한 사람이 몇 명인가"입니다.</p>
-      </div>
-
-      <div class="b b-2 reveal">
-        <div class="b-eye">02</div>
-        <h3>취업이 기본,<br/>창업은 데이터로.</h3>
-        <p>전원 졸업생. 기본은 취업. MVP가 의미 있는 수치에 도달하면 창업 전환.</p>
-      </div>
-
-      <div class="b b-3 reveal">
-        <div class="b-eye">03</div>
-        <h3>반응이 없으면<br/>빠르게 피봇.</h3>
-        <p>4주 사이클 검증. 애정보다 데이터를 신뢰합니다.</p>
-      </div>
-
-      <div class="b b-4 reveal">
-        <div class="b-eye">04</div>
-        <h3>페인은 인터뷰로.</h3>
-        <p>주 5건 인터뷰 기본. 가설보다 사실을 먼저 봅니다.</p>
-      </div>
-
-      <div class="b b-5 reveal">
-        <div class="b-eye">05</div>
-        <h3>BM은 첫 슬라이드부터.</h3>
-        <p>돈을 누가, 왜, 얼마나, 어떻게 내는지 1줄로 답할 수 있어야 합니다.</p>
-      </div>
-
-      <div class="b b-6 reveal">
-        <div class="b-eye">06</div>
-        <h3>비공개 없는 투명함.</h3>
-        <p>데일리 스크럼 상시 공개. 부끄러운 숫자도 먼저 꺼냅니다. 실수를 숨기지 않습니다.</p>
-      </div>
-
-      <div class="b b-7 reveal">
-        <div class="b-eye">PROCESS</div>
-        <h3>5단계 검증 사이클.</h3>
-        <p>페인 발굴 → 가설 한 줄 → 페이퍼 MVP → 결제 의향 → Go/Pivot. 한 칸이 비면 다음 칸으로 안 갑니다.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====================================================================
-     PROCESS STRIP — small detail under bento
-     ==================================================================== -->
-<section style="padding-top:0;">
-  <div class="container">
-    <div class="proc-strip reveal">
-      <div class="proc">
-        <div class="step">STEP 01</div>
-        <h4>페인 발굴</h4>
-        <p>주 5건 인터뷰. 같은 페인 80%에서 등장.</p>
-      </div>
-      <div class="proc">
-        <div class="step">STEP 02</div>
-        <h4>가설 한 줄</h4>
-        <p>"X에게 Y를 Z 방식으로 푼다."</p>
-      </div>
-      <div class="proc">
-        <div class="step">STEP 03</div>
-        <h4>페이퍼 MVP</h4>
-        <p>코드 X. Notion·Figma로 5명에게 시연.</p>
-      </div>
-      <div class="proc">
-        <div class="step">STEP 04</div>
-        <h4>결제 의향</h4>
-        <p>Stripe·토스 결제 페이지로 실제 시도.</p>
-      </div>
-      <div class="proc">
-        <div class="step">STEP 05</div>
-        <h4>Go / Pivot</h4>
-        <p>미달 시 4주 안에 방향 전환.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====================================================================
-     IDEAS — opener
-     ==================================================================== -->
-<section id="ideas" class="bg-2">
-  <div class="container">
-    <div class="s-head reveal">
-      <div class="kicker">탐색 중인 아이디어</div>
-      <h2>지금 보고 있는 두 가지<br/>페인포인트.</h2>
-      <p class="lede">
-        아이디에이션 단계입니다. 한 가지에 매몰되지 않고, 페인이 진짜 명확한 곳에서 시작합니다.<br/>
-        아래 두 영역은 팀이 실제로 만난 사람들의 고통에서 나왔습니다.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ====================================================================
-     IDEA 1 — Wedding photo curation
-     ==================================================================== -->
-<section style="padding-top: 0;" class="bg-2">
-  <div class="container">
-    <div class="showcase">
-      <div class="copy reveal">
-        <div class="kicker" style="font-size:14px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; color:var(--ink-4); margin-bottom:14px;">아이디어 01 · 웨딩</div>
-        <h2>만 장에서<br/>50장.</h2>
-        <p class="lede">
-          한국 최고의 웨딩 스튜디오는 1년치 예약을 5초 만에 마감합니다.
-          그곳에서 하루 종일 찍은 <strong style="color:var(--ink);">만 장의 사진</strong> 중 신부와 신랑이 직접
-          <strong style="color:var(--ink);">50장을 골라야</strong> 합니다. 본인 인생에서 가장 행복한 날의 사진인데,
-          그걸 다 보는 일이 가장 큰 고통이 됩니다.
-        </p>
-        <ul class="pts">
-          <li><span class="key">사용자</span><span>예비 신랑·신부 (결혼 직전 3~6개월)</span></li>
-          <li><span class="key">페인</span><span>만 장의 사진을 PC에서 한 장씩 비교하며 50장 선별 — 평균 8~15시간</span></li>
-          <li><span class="key">가설</span><span>AI 큐레이션으로 50장 후보를 자동 추출, 신부·신랑은 검토만</span></li>
-          <li><span class="key">검증</span><span>본인 팀원이 직접 경험한 페인 + 결준 카페·웨딩 커뮤니티 인터뷰</span></li>
-        </ul>
-      </div>
-      <div class="reveal">
-        <div class="wedding-visual">
-          <div class="tag">하루 만 장 · 그 중 50장</div>
-          <div class="phot-grid" id="wgrid">
-            <!-- 100 photos representing 10,000 → 50 picked -->
+    <div class="journey-grid">
+      <div class="exp-card reveal">
+        <div class="status">DIRECTION 01 · 보완 검토 중</div>
+        <h3>세무 AI 플랫폼</h3>
+        <p>1인 세무사·감정평가사의 페인포인트 — <span class="em">상속세 신고 시 10년치 거래내역 OCR, 정부 공적자료 일괄 조회</span> 등 — 를 푸는 AI 플랫폼 아이디어. 1인 전문직 시장이 커지는 흐름 속에서 페인은 명확합니다.</p>
+        <p>기술적으로 충분히 도전해볼 만한 영역이지만, 타겟 시장 크기와 민감 정보 신뢰 확보 측면에서 보완이 필요해 <span class="em">현재 일부 보류</span> 상태입니다. 시장성·보안 모델을 더 명확히 한 뒤에 다시 들여다볼 수 있다고 봅니다.</p>
+        <div class="status-list">
+          <div class="row">
+            <span class="k">기회</span>
+            <span class="v">명확한 페인 · 1인 전문직 시장 확대 · OCR·공적자료 자동화 수요</span>
           </div>
-          <div class="stat-overlay">
-            <div class="col">
-              <div class="n">10K</div>
-              <div class="l">하루 촬영</div>
-            </div>
-            <div class="arrow">→</div>
-            <div class="col">
-              <div class="n">50</div>
-              <div class="l">최종 선택</div>
-            </div>
+          <div class="row">
+            <span class="k">보완 필요</span>
+            <span class="v">타겟 시장 크기 · 민감 정보 신뢰 확보 모델</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="status active">DIRECTION 02 · 탐색 중</div>
+        <h3>가벼운 B2C 감성·관계 앱</h3>
+        <p>20~30대를 정조준하는 <span class="em">가벼운 B2C 카테고리</span>. 페인포인트 해결보다는 마케팅과 콘텐츠 자체가 가치의 중심이 되는 비타민형 제품. 빠른 출시와 강한 메시지로 단기간에 입소문을 만드는 접근.</p>
+        <p>한 번 잡으면 사용자 확보 비용이 매우 낮은 영역이지만, <span class="em">수익화와 리텐션 설계</span>가 본질적 과제입니다. 감성·관계·일상 중 어디에서 시작할지는 아직 열어두고 있습니다.</p>
+        <div class="status-list">
+          <div class="row">
+            <span class="k">기회</span>
+            <span class="v">빠른 입소문·바이럴 · 사용자 확보 비용 낮음 · 단기 데이터 축적</span>
+          </div>
+          <div class="row">
+            <span class="k">보완 필요</span>
+            <span class="v">수익화 모델 · 리텐션 설계 · 차별화 한 줄</span>
           </div>
         </div>
       </div>
     </div>
+
+    <p class="journey-note reveal">
+      어느 방향이든 — <strong style="color:var(--ink);">"만들 수 있다"가 아니라 "유저가 붙을 수 있다"</strong>를 기준으로 빠르게 시장에서 답을 받아보는 것을 우선합니다. 새로운 도메인 제안에도 열려 있습니다.
+    </p>
   </div>
 </section>
 
-<!-- ====================================================================
-     IDEA 2 — Tax AI for inheritance / appraisal pros
-     ==================================================================== -->
-<section style="padding-top: clamp(80px, 12vw, 140px);">
-  <div class="container">
-    <div class="showcase" style="direction: rtl;">
-      <div class="copy reveal" style="direction: ltr;">
-        <div class="kicker" style="font-size:14px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; color:var(--ink-4); margin-bottom:14px;">아이디어 02 · 세무 AI</div>
-        <h2>10년 치 통장,<br/>한 줄씩.</h2>
-        <p class="lede">
-          1인 세무사가 상속세 한 건을 처리하려면 사망일 기준 <strong style="color:var(--ink);">10년 치 거래 내역</strong>을
-          분석해야 합니다. 스캔된 PDF 수백 페이지를 세무사가 한 줄씩 직접 옮깁니다.
-          여기에 부동산 공적자료까지 — 주소당 자료가 5~10종. <strong style="color:var(--ink);">한 케이스에 100시간</strong>.
-        </p>
-        <ul class="pts">
-          <li><span class="key">사용자</span><span>1인·소형 세무사 사무소 (상속·증여 처리)</span></li>
-          <li><span class="key">페인</span><span>은행 거래내역 OCR + 분류 + 정부 공적자료 일괄 조회</span></li>
-          <li><span class="key">가설</span><span>OCR·LLM 분류 + 공공 API 통합으로 100시간 → 8시간</span></li>
-          <li><span class="key">검증</span><span>세무사 친구 인터뷰에서 출발 · 사무소 시범 도입 가능성 확인 중</span></li>
-        </ul>
-      </div>
-      <div class="reveal" style="direction: ltr;">
-        <div class="tax-visual">
-          <div class="tag">스캔 PDF · 공적자료 → 정형화</div>
-          <div class="stack-docs">
-            <div class="doc d1">
-              <div class="ln long"></div>
-              <div class="ln mid"></div>
-              <div class="ln short"></div>
-              <div class="ln mid"></div>
-              <div class="ln long"></div>
-              <div class="ln mid"></div>
-            </div>
-            <div class="doc d2">
-              <div class="ln long"></div>
-              <div class="ln long"></div>
-              <div class="ln mid"></div>
-              <div class="ln short"></div>
-              <div class="ln long"></div>
-              <div class="ln mid"></div>
-              <div class="ln short"></div>
-            </div>
-            <div class="doc d3">
-              <div class="ln mid"></div>
-              <div class="ln long"></div>
-              <div class="ln short"></div>
-              <div class="ln long"></div>
-              <div class="ln mid"></div>
-            </div>
-          </div>
-          <div class="ai-mark">OCR · 분류 · 통합</div>
-          <div class="stat-overlay">
-            <div class="n">100h</div>
-            <div class="l">→ 8h 목표</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<script>
-  /* Populate wedding photo grid (100 cells, mark random 4 as picked) */
-  (function(){
-    var g = document.getElementById('wgrid');
-    if (!g) return;
-    var picks = new Set([12, 27, 53, 88]); /* deterministic, looks intentional */
-    for (var i = 0; i < 100; i++) {
-      var d = document.createElement('div');
-      if (picks.has(i)) d.className = 'picked';
-      g.appendChild(d);
-    }
-  })();
-</script>
-
-<!-- ====================================================================
-     STILL EXPLORING — open to anything
-     ==================================================================== -->
-<section class="bg-3">
-  <div class="container-narrow">
-    <div class="aside-callout reveal">
-      <div class="small-eye">아이디에이션 단계</div>
-      <h3>이 두 가지가 끝이 아닙니다.</h3>
-      <p>
-        팀은 지금 페인이 가장 명확한 영역에서 출발하지만,
-        한 가지 아이디어에 매몰되지 않습니다. 멘토님과의 대화에서 더 강한 페인이 보이면
-        4주 안에 방향을 바꿀 준비가 되어 있습니다.<br/>
-        도메인·기술·시장 어느 축이든 열려 있습니다.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ====================================================================
-     MENTOR (dark)
-     ==================================================================== -->
+<!-- MENTOR (dark) -->
 <section id="mentor" class="dark">
   <div class="container">
     <div class="s-head reveal">
-      <div class="kicker">멘토</div>
-      <h2 style="color:#f5f5f7;">함께하고 싶은<br/>네 가지 결.</h2>
-      <p class="lede" style="color:#a1a1a6;">
-        기술 답변보다 의사결정의 시야를 주실 분, "왜?"를 끝까지 물어주실 분과 함께하고 싶습니다.
-      </p>
+      <div class="kicker">우리가 찾는 멘토님</div>
+      <h2>함께하고 싶은<br/>네 가지 결.</h2>
+      <p class="lede">기술 답변보다 의사결정의 시야를 주실 분, "왜?"를 끝까지 물어주실 분과 함께하고 싶습니다.</p>
     </div>
 
-    <div class="mentor-grid">
-      <div class="mentor-card reveal">
+    <div class="mg-grid">
+      <div class="mg reveal">
         <div class="lab">VISION</div>
-        <h4>팀의 눈이 되어주실 분</h4>
-        <p>개발에만 집중해온 우리에게 기획·마케팅·데이터·전략의 시각을 더해주실 분. 한 발 떨어져서 "지금 가는 방향이 맞나"를 같이 봐주실 분.</p>
+        <h4>팀의 '눈'이 되어주실 멘토님</h4>
+        <p>지금까지 아이디어와 개발에만 시야가 좁아져 있었습니다. 개발을 넘어 기획·마케팅·데이터 분석까지, 전반의 방향성을 함께 봐주실 분.</p>
       </div>
 
-      <div class="mentor-card reveal">
+      <div class="mg reveal">
         <div class="lab">WHY</div>
-        <h4>모든 결정에 "왜?"를 물어주실 분</h4>
-        <p>"왜 이 유저가 쓸까요?", "왜 이 기능을?", "왜 이 기술 스택을?" — 모든 결정의 이유를 끝까지 묻는 분과 함께라면 우리가 만드는 모든 것에 명확한 근거가 생깁니다.</p>
+        <h4>끊임없이 "Why?"를 물어주실 멘토님</h4>
+        <p>"왜 이 유저가 이걸 쓸까요?" · "왜 이 기능을 먼저 만들었나요?" · "왜 이 기술을?" 결정의 이유를 계속 되묻는 멘토님과 함께라면, 우리가 만드는 모든 것에 분명한 근거가 생깁니다.</p>
       </div>
 
-      <div class="mentor-card reveal">
+      <div class="mg reveal">
         <div class="lab">CRAFT</div>
-        <h4>현업의 사고법을 보여주실 분</h4>
-        <p>기술 자체보다 "현업은 이렇게 우선순위를 정하고 의사결정한다"는 사고 흐름을 보여주실 분. 우리 시야의 다음 단계를 열어주실 분.</p>
+        <h4>현업의 '일하는 방식'을 보여주실 멘토님</h4>
+        <p>아직 주니어의 시야에 머물러 있습니다. 현업에서 어떻게 우선순위를 정하고, 의사결정하며, 협업하는지 — 기술 자체보다 "이렇게 생각하고 일하는구나"를 배우는 것이 가장 큰 자산이라 믿습니다.</p>
       </div>
 
-      <div class="mentor-card reveal" style="grid-column: span 3;">
+      <div class="mg reveal">
         <div class="lab">GROWTH</div>
-        <h4>성장 경로를 함께 설계해주실 분</h4>
-        <p>좋은 제품을 만드는 경험이 자연스럽게 우리의 언어가 되도록, 그 흐름을 함께 설계해주실 분. 취업이든 창업이든 그 경험이 우리만의 이야기가 되도록 커리어 관점의 조언도 함께.</p>
+        <h4>성장의 방향을 함께 설계해주실 멘토님</h4>
+        <p>좋은 제품을 만드는 과정에서 쌓인 경험이 자연스럽게 우리의 언어가 되고, 그 경험이 채용 시장에서 우리만의 이야기가 되도록 — 제품과 커리어, 두 축을 함께 그려주실 분.</p>
       </div>
-    </div>
-
-    <div style="text-align:center; max-width: 720px; margin: clamp(56px, 7vw, 88px) auto 0; color: #a1a1a6; font-size: 14px; line-height: 1.7; letter-spacing: -0.005em;" class="reveal">
-      <strong style="color:#f5f5f7; display:block; margin-bottom:8px;">받는 자세도 분명합니다.</strong>
-      듣기 좋은 말보다 아픈 피드백을 우선하고, 다음 세션 전까지 결과물과 지표로 답합니다.<br/>
-      데일리 스크럼·KPI·실패 회고·내부 의견 충돌까지 가공 없이 상시 공개드립니다.
     </div>
   </div>
 </section>
 
-<!-- ====================================================================
-     STAT-LINE — closing numbers
-     ==================================================================== -->
+<!-- ATTITUDE -->
 <section>
   <div class="container">
     <div class="s-head reveal">
-      <div class="kicker">팀이 추적하는 숫자</div>
-      <h2>매주 보는 단일 지표.</h2>
+      <div class="kicker">멘토링을 받는 자세</div>
+      <h2>듣기 좋은 말보다,<br/>아픈 피드백을 먼저.</h2>
     </div>
 
-    <div class="stat-line">
-      <div class="sl reveal">
-        <div class="n">5<span class="u">건</span></div>
-        <div class="l">주간 사용자 인터뷰<br/>(하한선)</div>
+    <div class="attitude">
+      <div class="mg reveal">
+        <div class="lab">ATTITUDE 01</div>
+        <h4>아픈 피드백을 우선합니다</h4>
+        <p>"잘하고 있다"보다 "왜 이렇게 했냐"는 질문이 더 필요한 단계입니다. 지적에 방어부터 하지 않고, 의도를 먼저 이해하고 팀 내에서 다시 논의해 의사결정에 반영합니다. 피드백이 아프다면, 그건 예방 접종입니다.</p>
       </div>
-      <div class="sl reveal">
-        <div class="n">4<span class="u">주</span></div>
-        <div class="l">가설 검증 사이클<br/>(피봇 결정)</div>
+      <div class="mg reveal">
+        <div class="lab">ATTITUDE 02</div>
+        <h4>말이 아니라, 결과물과 지표로 답합니다</h4>
+        <p>유저 수·매출·실패한 실험·팀 내부 의견 충돌까지 가공 없이 공유합니다. 부끄러운 숫자일수록 먼저 꺼냅니다. 반영이 어려운 피드백이라면 트레이드오프를 솔직히 말씀드려 멘토링이 양방향이 되도록 합니다.</p>
       </div>
-      <div class="sl reveal">
-        <div class="n">WAU<span class="u"></span></div>
-        <div class="l">주간 활성 사용자<br/>(첫 평가 기준)</div>
-      </div>
-      <div class="sl reveal">
-        <div class="n">$<span class="u"></span></div>
-        <div class="l">매출 발생<br/>(MVP 단계 필수)</div>
+      <div class="mg reveal">
+        <div class="lab">ATTITUDE 03</div>
+        <h4>데일리 스크럼을 기록하고, 상시 공개합니다</h4>
+        <p>매일의 진행 상황·막힌 부분·결정 사항을 기록해 항상 열어두겠습니다. 멘토링 시간에만 포장된 보고서를 보여드리는 게 아니라, 팀이 매일 어떻게 움직이는지를 가공 없이 확인하실 수 있도록 합니다.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ====================================================================
-     FOOTER
-     ==================================================================== -->
+<!-- STACK + GROUND RULES -->
+<section class="bg-3">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="kicker">기술 스택 & 협업</div>
+      <h2>도구는 문제에 맞춥니다.</h2>
+      <p class="lede">특정 기술을 미리 정해두고 끼워 맞추지 않습니다. 문제에 가장 적합한 스택을 그때그때 채택합니다.</p>
+    </div>
+
+    <div class="stack-grid">
+      <div class="sk reveal">
+        <div class="lab">FRONT-END</div>
+        <h4>웹과 모바일</h4>
+        <div class="items">
+          <span>React</span>
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>Tailwind CSS</span>
+          <span>React Native (필요시)</span>
+        </div>
+      </div>
+      <div class="sk reveal">
+        <div class="lab">BACK-END</div>
+        <h4>안정성과 확장성</h4>
+        <div class="items">
+          <span>Spring Boot</span>
+          <span>Node.js · NestJS</span>
+          <span>MySQL</span>
+          <span>Redis</span>
+        </div>
+      </div>
+      <div class="sk reveal">
+        <div class="lab">AI · DEVOPS</div>
+        <h4>모델 서빙과 자동화</h4>
+        <div class="items">
+          <span>FastAPI</span>
+          <span>Docker</span>
+          <span>AWS</span>
+          <span>GitHub Actions</span>
+        </div>
+      </div>
+      <div class="sk reveal">
+        <div class="lab">COLLABORATION</div>
+        <h4>투명한 협업</h4>
+        <div class="items">
+          <span>Slack</span>
+          <span>Notion</span>
+          <span>GitHub · PR 리뷰</span>
+          <span>Issue · Project 보드</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ground reveal">
+      <h3>그라운드 룰</h3>
+      <ol>
+        <li>
+          <strong>피드백 수용성 극대화</strong>
+          의견과 코드 리뷰에 감정적으로 대응하지 않고, 오직 "더 나은 프로덕트"를 위해 건강하게 토론합니다.
+        </li>
+        <li>
+          <strong>문서화 생활화</strong>
+          기획 변화·기술 의사결정(ADR)·트러블슈팅 과정을 Notion·GitHub에 기록해 자산화합니다.
+        </li>
+        <li>
+          <strong>빠른 실패, 기민한 움직임</strong>
+          완벽한 기획에 시간을 끌기보다, 빠르게 실행·검증하고 방향을 수정합니다.
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="container">
-    <span>SW Maestro 17기 · Team · 2026</span>
+    <span>ASM 17기 · 팀 SMP 500 · 2026</span>
     <span>
-      <a href="#identity">팀</a> &nbsp;·&nbsp;
-      <a href="#members">멤버</a> &nbsp;·&nbsp;
-      <a href="#how">우리가 일하는 법</a> &nbsp;·&nbsp;
-      <a href="#ideas">아이디어</a> &nbsp;·&nbsp;
+      <a href="#identity">정체성</a> &nbsp;·&nbsp;
+      <a href="#chars">특징</a> &nbsp;·&nbsp;
+      <a href="#members">팀원</a> &nbsp;·&nbsp;
+      <a href="#journey">우리의 흔적</a> &nbsp;·&nbsp;
       <a href="#mentor">멘토</a>
     </span>
   </div>
