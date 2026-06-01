@@ -224,34 +224,29 @@ section.dark .identity p { color: #f5f5f7; }
   letter-spacing: 0.005em;
 }
 
-/* Photo placeholder for "in-person" identity */
+/* Team photo */
 .photo-frame {
   margin: clamp(48px, 7vw, 80px) auto 0;
-  max-width: 760px;
-  aspect-ratio: 16 / 10;
-  border-radius: 24px;
-  background:
-    linear-gradient(135deg, #efeae3 0%, #d8cfc4 50%, #b8a99a 100%);
-  position: relative;
+  max-width: 820px;
+  border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+  background: var(--bg-3);
+  display: block;
 }
-.photo-frame::after {
-  content: "TEAM MEETING · OFFLINE";
-  position: absolute;
-  bottom: 20px; left: 24px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: rgba(60, 40, 30, 0.5);
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-.photo-frame .glyph {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  color: rgba(60, 40, 30, 0.18);
-  font-size: clamp(80px, 12vw, 140px);
-  font-weight: 200;
-  letter-spacing: -0.06em;
+.photo-cap {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin-top: 18px;
 }
 
 /* ===================================================================== */
@@ -785,9 +780,10 @@ footer .container a:hover { color: var(--ink); }
       <div class="sub">— 멘토님과도 그렇게 가까이서 호흡하며 배우고 싶습니다.</div>
     </div>
 
-    <div class="photo-frame reveal" aria-label="팀 미팅 사진 영역">
-      <div class="glyph">SMP</div>
-    </div>
+    <figure class="photo-frame reveal">
+      <img src="team-photo.jpg" alt="팀 SMP 500 단체 사진 — 오프라인 미팅" loading="lazy" />
+    </figure>
+    <p class="photo-cap reveal">Team SMP 500 · Offline</p>
   </div>
 </section>
 
