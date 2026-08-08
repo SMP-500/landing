@@ -24,10 +24,10 @@
 
 | 페이지의 내용 | 근거 |
 | --- | --- |
-| 이체는 지출이 아니다 · 초안은 집계에 안 들어간다 | [09-SPEC](https://github.com/SMP-500/didim/blob/main/09-SPEC.md) |
+| 이체는 지출이 아니다 · 초안은 집계에 안 들어간다 | [09-SPEC](https://github.com/SMP-500/didim/blob/main/quality/behavior-spec.md) |
 | 제품 원칙 6가지 | [종이 가계부에서 출발한 설계](https://github.com/SMP-500/didim/blob/main/docs/superpowers/specs/2026-08-07-ledger-design.md) |
-| 용어 (썼어요 / 들어왔어요 / 남았어요 / 옮겼어요) | [05-IA §9](https://github.com/SMP-500/didim/blob/main/05-IA.md) |
-| 테스트 숫자 | [14-SPRINT](https://github.com/SMP-500/didim/blob/main/14-SPRINT.md) |
+| 용어 (썼어요 / 들어왔어요 / 남았어요 / 옮겼어요) | [05-IA §9](https://github.com/SMP-500/didim/blob/main/product/glossary.md) |
+| 테스트 숫자 | [14-SPRINT](https://github.com/SMP-500/didim/blob/main/process/sprint.md) |
 
 `keynote.html` 의 화면은 **시뮬레이터에서 실제로 찍은 것**입니다. 손으로 그린 목업이 아닙니다.
 화면이 바뀌면 다시 찍어 넣습니다 — 옛 화면을 그대로 두면 자료가 제품을 잘못 알립니다.
