@@ -61,7 +61,7 @@
   <p class="mark">모루 · 개인정보 처리방침</p>
   <h1>무엇을 받고,<br>어떻게 지우는지</h1>
   <p class="lead">모루는 로그인한 계정의 가계부 기록을 서버에 저장합니다.<br>광고에 쓰지 않고, 팔지 않습니다.</p>
-  <p class="meta">시행일 2026년 ○○월 ○○일 · 적용 대상: iOS 앱 「모루」 ○.○ 부터 · Android 앱 「모루」 1.0</p>
+  <p class="meta">시행일 2026년 ○○월 ○○일 · 적용 대상: iOS 앱 「모루」 1.0 · Android 앱 「모루」 1.0</p>
 </header>
 
 <section class="wrap">
@@ -90,8 +90,8 @@
     <tr><th>앱·기기 정보와 설치 식별자</th><td>앱 버전·OS 버전·기기 모델·언어와, Firebase 가 앱을 설치할 때마다 새로 만드는 식별자(앱 인스턴스 ID·설치 ID). Google 은 접속 IP 주소로 <strong>대략의 지역</strong>(국가·도시 수준)을 추정합니다. 계정 고유 식별값·이름·이메일·광고 식별자는 Google 에 보내지 않습니다.</td></tr>
     <tr><th>분석 식별자 연결</th><td>계정을 지울 때 Google 에 삭제를 요청하려면 어느 식별자가 이 계정의 것이었는지 알아야 합니다. 그래서 모루 서버가 <strong>계정과 앱 인스턴스 ID 를 이어 둔 목록</strong>을 보관합니다. 삭제 요청에만 쓰고, 개인별 사용 기록을 조회하거나 가계부와 합쳐 분석하는 데 쓰지 않습니다.</td></tr>
   </table>
-  <p>사용 기록·오류 보고·앱·기기 정보와 설치 식별자·분석 식별자 연결은 <strong>iOS 앱에만</strong> 해당합니다. Android 앱은 이 정보를 Google Firebase 로 보내지 않습니다.</p>
-  <p>연락처·정확한 위치·광고 식별자는 수집하지 않습니다. 앱은 카메라·사진 보관함·알림 권한을 요청하지 않습니다.</p>
+  <p>사용 기록·오류 보고·앱·기기 정보와 설치 식별자·분석 식별자 연결은 <strong>Android 앱 1.0.1 부터</strong> 해당합니다. iOS 앱은 아직 이 정보를 Google Firebase 로 보내지 않으며, 보내기 전에 이 처리방침을 먼저 고칩니다.</p>
+  <p>연락처·정확한 위치·광고 식별자는 수집하지 않습니다. 앱은 카메라·사진 보관함 권한과 알림을 보내는 권한을 요청하지 않습니다. Android 앱은 사용자가 「알림에서 넣기」를 켠 경우에만 시스템의 <strong>알림 접근</strong> 허용을 요청합니다(4항).</p>
 </section>
 
 <section class="wrap">
@@ -101,7 +101,7 @@
     <tr><th>가계부 기록</th><td>기록을 저장하고, 잔액·합계·통계를 계산해 보여 주는 데 씁니다. <strong>사용자가 지우거나 계정을 지울 때까지</strong> 보관합니다.</td></tr>
     <tr><th>기기 구분값</th><td>기기 사이에서 기록이 겹칠 때 순서를 가르는 데만 씁니다. 그 기록과 함께 보관하고, 기록이나 계정을 지우면 함께 지워집니다.</td></tr>
     <tr><th>서버 운영 기록</th><td>장애를 확인하고 고치는 데 씁니다. <strong>30일</strong> 뒤 지워집니다.</td></tr>
-    <tr><th>사용 기록 · 앱·기기 정보</th><td>어떤 기능이 쓰이고 어디서 막히는지 보고 다음에 무엇을 고칠지 정하는 데 씁니다. 보는 것은 분포와 비율이고, 개인의 사용 내역을 들여다보지 않습니다. 설치별 기록은 Google Analytics 에서 <strong>2개월</strong> 뒤 지워지고, 그 뒤에는 누구 것인지 알 수 없는 합계만 남습니다.</td></tr>
+    <tr><th>사용 기록 · 앱·기기 정보</th><td>어떤 기능이 쓰이고 어디서 막히는지 보고 다음에 무엇을 고칠지 정하는 데 씁니다. 보는 것은 분포와 비율이고, 개인의 사용 내역을 들여다보지 않습니다. Google Analytics 에서 개별 사건은 <strong>2개월</strong>, 설치별 식별자에 묶인 정보는 <strong>마지막 사용으로부터 14개월</strong> 뒤 지워지고, 그 뒤에는 누구 것인지 알 수 없는 합계만 남습니다.</td></tr>
     <tr><th>오류 보고</th><td>앱이 멈추는 원인을 찾아 고치는 데 씁니다. Firebase Crashlytics 에 <strong>90일</strong> 보관된 뒤 지워집니다.</td></tr>
     <tr><th>설치 식별자</th><td>사용 기록과 오류 보고를 설치별로 구분하고, 일부 기능을 켜고 끄는 설정값을 받는 데 씁니다. 로그아웃하면 앱이 분석 식별자(앱 인스턴스 ID)를 초기화하고, 계정을 지우면 설치 ID 삭제도 요청합니다. Google 은 삭제 요청 뒤 <strong>180일 안에</strong> 설치 ID 를 지웁니다.</td></tr>
     <tr><th>분석 식별자 연결</th><td>계정을 지울 때 Google 에 삭제를 요청하는 데만 씁니다. <strong>계정을 지울 때까지</strong> 보관합니다. 계정을 지우면 계정과의 연결은 바로 끊기고, 식별자는 Google 이 삭제 요청을 접수할 때까지만 남습니다.</td></tr>
@@ -114,7 +114,7 @@
   <p>개인정보를 제3자에게 <strong>제공하거나 판매하지 않습니다.</strong> 서비스를 운영하기 위해 아래와 같이 처리를 맡기고 있습니다.</p>
   <table>
     <tr><th>Amazon Web Services</th><td>서버와 데이터베이스 운영(보관). 서울 리전에 저장합니다.</td></tr>
-    <tr><th>Google LLC (Firebase)</th><td>iOS 앱의 사용 기록 집계(Google Analytics)·오류 보고 수집(Crashlytics)·기능 설정값 전달(Remote Config). 국외에서 처리합니다 — 아래 표.</td></tr>
+    <tr><th>Google LLC (Firebase)</th><td>Android 앱의 사용 기록 집계(Google Analytics)·오류 보고 수집(Crashlytics)·기능 설정값 전달(Remote Config). 국외에서 처리합니다 — 아래 표.</td></tr>
   </table>
   <p>Firebase 로 보내는 정보는 국외로 이전됩니다.</p>
   <table>
@@ -128,13 +128,14 @@
   <p>Google 이 이 정보를 광고에 쓰도록 하는 설정(광고 맞춤·Google 신호·Google 제품과의 데이터 공유)은 모두 꺼 두었습니다.</p>
   <p>로그인은 Apple 의 「Apple 로 로그인」 또는 Google 의 「Google 로 로그인」을 거칩니다. 이때 각 회사가 처리하는 정보에는 <a href="https://www.apple.com/kr/legal/privacy/" rel="noopener">Apple</a>, <a href="https://policies.google.com/privacy?hl=ko" rel="noopener">Google</a> 의 개인정보 처리방침이 적용됩니다. 모루는 가계부 기록을 이 회사들에 보내지 않습니다.</p>
   <p>Android 앱의 「사진에서 넣기」「내역서 넣기」는 Google ML Kit 으로 기기 안에서 글자를 읽습니다. 사진과 읽은 글자는 보내지 않습니다. 다만 ML Kit 은 기능 진단을 위해 기기 모델·OS 버전·앱 이름과 버전·처리 시간·오류 코드·설치별 식별값을 암호화해 Google LLC(미국)로 보냅니다(<a href="https://developers.google.com/ml-kit/android-data-disclosure" rel="noopener">ML Kit 데이터 공개</a>).</p>
-  <p>앱 안에 광고 네트워크는 들어 있지 않고, 광고 식별자를 읽거나 추적 허용을 묻지 않습니다. 제3자 SDK 는 Google 로그인과, iOS 앱의 Google Firebase(Analytics·Crashlytics·Remote Config), Android 앱의 글자 인식에 쓰는 Google ML Kit 입니다. Android 앱에는 행동 분석(analytics)·오류 수집 SDK 가 들어 있지 않습니다.</p>
+  <p>앱 안에 광고 네트워크는 들어 있지 않고, 광고 식별자를 읽거나 추적 허용을 묻지 않습니다. 제3자 SDK 는 Google 로그인과, Android 앱의 Google Firebase(Analytics·Crashlytics·Remote Config)와 글자 인식에 쓰는 Google ML Kit 입니다. iOS 앱에는 아직 행동 분석(analytics)·오류 수집 SDK 가 들어 있지 않습니다.</p>
 </section>
 
 <section class="wrap">
   <h2>4. 기기 안에서 처리하는 것</h2>
   <table>
     <tr><th>사진 · PDF</th><td>「사진에서 넣기」「내역서 넣기」에서 사용자가 직접 고른 파일만 읽고, 글자 인식은 기기 안에서 합니다. 원본 파일은 서버로 보내지 않습니다. 사용자가 미리보기에서 확인하고 저장한 거래만 서버에 저장됩니다.</td></tr>
+    <tr><th>결제 알림 (Android)</th><td>사용자가 설정에서 「알림에서 넣기」를 켜고 알림 접근을 허용한 경우에만, 카드·은행 앱의 알림과 카드 승인 문자 알림을 기기 안에서 읽습니다. 그 밖의 알림은 읽기 전에 걸러져 어디에도 남지 않습니다. 결제 알림에서 <strong>금액·가게·시각·카드 뒷자리</strong>만 꺼내 이 기기에 두고, 알림 원문은 남기지 않습니다. 사용자가 확인하고 저장한 것만 거래로 서버에 저장됩니다. 저장하지 않은 것은 최대 100개·30일까지 두며, 기능을 끄거나 로그아웃·탈퇴하면 지웁니다.</td></tr>
     <tr><th>위젯</th><td>홈 화면 위젯이 보여 줄 요약을 기기 안에 사본으로 둡니다.</td></tr>
     <tr><th>로그인 유지</th><td>로그인 상태를 유지하기 위한 토큰을 기기의 안전한 저장소(iOS 키체인, Android Keystore)에 보관합니다.</td></tr>
     <tr><th>진단 데이터</th><td>iOS 설정에서 「앱 개발자와 공유」를 켠 경우에만 Apple 이 앱 충돌 정보를 익명으로 개발자에게 전달할 수 있습니다. 가계부 내용은 포함되지 않습니다.</td></tr>
@@ -186,7 +187,8 @@
 <section class="wrap">
   <h2>변경 이력</h2>
   <table>
-    <tr><th>2026-○○-○○</th><td>사용 기록·오류 보고를 Google Firebase 로 보내는 것을 반영(iOS 앱) — 수집 항목·보유 기간·처리 위탁·국외 이전·계정 삭제</td></tr>
+    <tr><th>2026-○○-○○</th><td>사용 기록·오류 보고를 Google Firebase 로 보내는 것을 반영(Android 앱 1.0.1) — 수집 항목·보유 기간·처리 위탁·국외 이전·계정 삭제</td></tr>
+    <tr><th>2026-10-15</th><td>Android 의 「알림에서 넣기」를 반영 — 켠 경우에만 알림 접근을 요청하고, 결제 알림에서 꺼낸 값은 기기 안에 두며 저장한 것만 서버로 간다는 것</td></tr>
     <tr><th>2026-10-14</th><td>Android 앱을 적용 대상에 넣음 — 기기 구분값, Android 글자 인식(ML Kit)의 진단 정보, 로그인 토큰 보관 위치. 문의 이메일을 smp500busan@gmail.com 으로 변경</td></tr>
     <tr><th>2026-10-06</th><td>로그인과 서버 저장을 반영해 전면 개정 — 수집 항목·보유 기간·처리 위탁·계정 삭제</td></tr>
     <tr><th>2026-08-19</th><td>최초 시행 (iOS 1.0)</td></tr>
