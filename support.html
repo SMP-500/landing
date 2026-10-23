@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>모루 · 고객 지원</title>
+<meta name="description" content="모루 문의 방법, 자주 묻는 질문, 계정 삭제 방법.">
+<link rel="icon" href="assets/img/icon.png">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .ways { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 6px 0 10px; }
+  .ways .card p { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
+  .ways img { width: 56px; height: 56px; object-fit: contain; margin-bottom: 8px; }
+  @media (max-width: 640px) { .ways { grid-template-columns: 1fr; } }
+  details { background: var(--surface); border-radius: 18px; padding: 18px 22px; margin: 0 0 10px; }
+  summary { cursor: pointer; font-weight: 650; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--accent); font-weight: 700; }
+  details[open] summary::after { content: "−"; }
+  details p, details ul { color: var(--muted); font-size: 15px; margin: 10px 0 0; }
+</style>
+</head>
+<body class="doc">
+
+<div class="bar">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/img/icon.png" alt="" width="30" height="30">모루</a>
+    <nav aria-label="사이트">
+      <a href="./">소개</a>
+      <a href="manual.html">사용설명서</a>
+      <a href="privacy.html">개인정보<span class="long"> 처리방침</span></a>
+      <a class="wide" href="support.html" aria-current="page">문의</a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap narrow">
+<header class="top">
+  <p class="eyebrow">고객 지원</p>
+  <h1>무엇을 도와드릴까요?</h1>
+  <p class="lead">문의는 앱 안이나 이메일로 보내 주세요. 확인하는 대로 답해요.</p>
+</header>
+
+<div class="ways">
+  <div class="card"><img src="assets/img/icon.png" alt=""><h3>앱 안에서 문의</h3><p>설정 → <strong>문의 · 기능 요청</strong>에 적어 보내면 운영팀 메일함으로 바로 와요. 계정이나 가계부 내용은 함께 가지 않아요.</p></div>
+  <div class="card"><h3>이메일</h3><p><a href="mailto:smp500busan@gmail.com?subject=%5B%EB%AA%A8%EB%A3%A8%20%EB%AC%B8%EC%9D%98%5D">smp500busan@gmail.com</a><br>쓰는 기기(iPhone·Android)와 앱 버전을 함께 적어 주시면 더 빨리 확인할 수 있어요.</p></div>
+</div>
+
+<article>
+<section>
+  <h2>자주 묻는 질문</h2>
+
+  <details>
+    <summary>기기를 바꾸면 기록은 어떻게 되나요?</summary>
+    <p>가계부 기록은 로그인한 계정의 서버에 저장돼요. 새 기기에서 같은 Apple 또는 Google 계정으로 로그인하면 그대로 이어져요. 다만 <strong>투자 기록은 기기 안에만</strong> 있어서, 옮기려면 설정의 「투자 기록 CSV 내보내기」로 꺼내 두세요.</p>
+  </details>
+
+  <details>
+    <summary>이체가 이번 달 소비에 안 잡혀요.</summary>
+    <p>의도한 동작이에요. 통장에서 현금으로 옮긴 돈은 쓴 돈이 아니라 자리만 바뀐 돈이라, 소비에 넣으면 이번 달 쓴 돈이 부풀어요. 이체는 잔액에만 반영돼요.</p>
+  </details>
+
+  <details>
+    <summary>사진으로 가져온 거래가 잔액에 안 들어가요.</summary>
+    <p>사진·내역서·반복 거래가 만든 기록은 먼저 초안으로 들어와요. 미리보기나 확인 필요 거래에서 확인하고 저장해야 잔액과 통계에 반영돼요.</p>
+  </details>
+
+  <details>
+    <summary>추적 허용 창은 왜 뜨나요? 거부해도 되나요?</summary>
+    <p>모루 광고를 보고 설치했는지 광고 측정 회사(Meta·Airbridge)가 셀 수 있게 묻는 창이에요. 허용하지 않아도 모든 기능을 똑같이 쓸 수 있고, 가계부 내용은 어느 쪽이든 보내지 않아요. 나중에 iPhone 설정 → 개인정보 보호 및 보안 → 추적에서 바꿀 수 있어요.</p>
+  </details>
+
+  <details>
+    <summary>사용 기록 보내기를 끄고 싶어요.</summary>
+    <p>앱의 설정 → 앱 → 「사용 기록 보내기」를 끄면 그 기기에서 사용 기록과 오류 보고가 멈춰요. 꺼도 기능은 하나도 줄지 않아요.</p>
+  </details>
+
+  <details>
+    <summary>투자만 쓰고 싶어요.</summary>
+    <p>설정 → 투자 → 「투자 전용 모드」를 켜면 가계부 탭이 숨고 투자 · 일지 · 분석 탭만 남아요. 가계부 기록은 그대로 남고, 끄면 돌아와요.</p>
+  </details>
+
+  <details>
+    <summary>더 자세한 사용법이 궁금해요.</summary>
+    <p><a href="manual.html">사용설명서</a>에 입력부터 예산·반복 거래까지 정리해 두었어요.</p>
+  </details>
+</section>
+
+<section>
+  <h2>계정과 데이터 삭제</h2>
+  <ul>
+    <li><strong>iPhone</strong> — 설정 → 계정 관리 → 회원 탈퇴</li>
+    <li><strong>Android</strong> — 설정 → 계정 지우기</li>
+  </ul>
+  <p>로그인 정보와 서버에 있는 가계부 기록 전체가 즉시 삭제되고, 되돌릴 수 없어요. 앱을 지우는 것만으로는 서버의 기록이 지워지지 않아요. 앱을 쓸 수 없는 상황이라면 위 이메일로 삭제를 요청해 주세요. 무엇이 어떻게 지워지는지는 <a href="privacy.html#rights">개인정보 처리방침 5절</a>에 있어요.</p>
+</section>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a href="./">소개</a>
+    <a href="manual.html">사용설명서</a>
+    <a href="privacy.html">개인정보 처리방침</a>
+    <a href="support.html">문의</a>
+    <span class="copy">© 2026 모루 팀 · SMP 500</span>
+  </div>
+</footer>
+</body>
+</html>
