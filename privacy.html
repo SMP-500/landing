@@ -4,215 +4,227 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>모루 개인정보 처리방침</title>
-<meta name="description" content="모루 가계부의 개인정보 처리방침. 로그인한 계정의 가계부 기록을 모루 서버에 저장하며, 무엇을 받고 어떻게 지우는지 밝힙니다.">
-<style>
-  :root {
-    --ink: #111318;
-    --muted: #6b7280;
-    --line: #e5e7eb;
-    --bg: #ffffff;
-    --accent: #1d4ed8;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --ink:#f3f4f6; --muted:#9ca3af; --line:#26292f; --bg:#0b0d10; --accent:#7aa2ff; }
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0; background: var(--bg); color: var(--ink);
-    font: 400 17px/1.7 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Pretendard, system-ui, sans-serif;
-    letter-spacing: -0.01em;
-  }
-  .wrap { max-width: 620px; margin: 0 auto; padding: 0 24px; }
-
-  header { padding: 100px 0 60px; }
-  .mark { font-size: 13px; font-weight: 700; letter-spacing: .12em; color: var(--muted); margin: 0 0 26px; }
-  h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.22; font-weight: 700; margin: 0 0 22px; letter-spacing: -0.03em; }
-  .lead { font-size: 19px; color: var(--muted); margin: 0; }
-  .meta { margin-top: 18px; font-size: 15px; color: var(--muted); }
-
-  section { padding: 44px 0; border-top: 1px solid var(--line); }
-  h2 { font-size: 15px; font-weight: 700; color: var(--muted); margin: 0 0 20px; letter-spacing: .02em; }
-  p { margin: 0 0 16px; }
-  p:last-child { margin-bottom: 0; }
-  strong { font-weight: 650; }
-  ul { margin: 0 0 16px; padding-left: 20px; }
-  li { margin-bottom: 6px; }
-
-  table { width: 100%; border-collapse: collapse; font-size: 16px; margin: 0 0 16px; }
-  th, td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); }
-  th { color: var(--muted); font-weight: 600; white-space: nowrap; width: 34%; }
-
-  .quote {
-    margin: 0; padding: 22px 24px; border-radius: 14px;
-    background: color-mix(in srgb, var(--accent) 7%, transparent);
-    font-size: 18px; line-height: 1.6;
-  }
-
-  footer { padding: 50px 0 90px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-</style>
+<title>모루 · 개인정보 처리방침</title>
+<meta name="description" content="모루가 무엇을 받고, 어디에 맡기고, 어떻게 지우는지.">
+<link rel="icon" href="assets/img/icon.png">
+<link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
+<body class="doc">
 
-<header class="wrap">
-  <p class="mark">모루 · 개인정보 처리방침</p>
+<div class="bar">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/img/icon.png" alt="" width="30" height="30">모루</a>
+    <nav aria-label="사이트">
+      <a href="./">소개</a>
+      <a href="manual.html">사용설명서</a>
+      <a href="privacy.html" aria-current="page">개인정보<span class="long"> 처리방침</span></a>
+      <a class="wide" href="support.html">문의</a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap narrow">
+<header class="top">
+  <p class="eyebrow">개인정보 처리방침</p>
   <h1>무엇을 받고,<br>어떻게 지우는지</h1>
-  <p class="lead">모루는 로그인한 계정의 가계부 기록을 서버에 저장합니다.<br>광고에 쓰지 않고, 팔지 않습니다.</p>
-  <p class="meta">시행일 2026년 10월 21일 · 적용 대상: iOS 앱 「모루」 1.0 · Android 앱 「모루」 1.1.0</p>
+  <p class="lead">모루는 로그인한 계정의 가계부 기록을 서버에 저장합니다. 가계부 기록은 광고에 쓰지 않고, 팔지 않습니다.</p>
+  <p class="meta">시행일 2026년 10월 23일 · 적용 대상: iOS 앱 「모루」 1.2 · Android 앱 「모루」 1.1.0 · 운영: 모루 팀(SMP 500)</p>
 </header>
 
-<section class="wrap">
-  <h2>요약</h2>
-  <p class="quote">가계부는 사람의 하루를 가장 정확하게 기록하는 문서입니다. 그래서 모루는 <strong>가계부를 보여 주는 데 필요한 것만</strong> 받고, 그 밖의 용도로 쓰지 않습니다.</p>
-  <ul style="margin-top:20px">
-    <li>모루를 쓰려면 <strong>Apple 또는 Google 계정으로 로그인</strong>해야 합니다.</li>
-    <li>적은 내용·금액·자산·분류는 <strong>로그인한 계정의 모루 서버</strong>에 저장됩니다. 기기를 바꿔도 기록이 남는 이유입니다.</li>
-    <li>이름·이메일·전화번호는 <strong>받지 않습니다.</strong></li>
-    <li>어떤 기능이 쓰이는지와 앱이 멈춘 자리를 알기 위해 <strong>Google 의 Firebase</strong> 로 사용 기록과 오류 보고를 보냅니다. <strong>금액·내용·메모는 보내지 않습니다.</strong> 앱의 설정에서 끌 수 있고, 꺼도 모든 기능을 쓸 수 있습니다.</li>
-    <li>앱 안에 <strong>광고를 보여 주는 SDK 는 없습니다.</strong> 다만 Android 앱은 Meta 에 낸 앱 설치 광고가 설치로 이어졌는지 재기 위해 <strong>Meta 의 SDK</strong> 로 설치·실행 사건과 광고 식별자를 보냅니다. 가계부 내용은 싣지 않습니다. 기기 설정에서 광고 ID 를 지우거나 재설정하면 식별자 없이 집계만 됩니다.</li>
-    <li>사진과 PDF 는 <strong>기기 안에서만</strong> 읽습니다. 원본 파일은 서버로 가지 않습니다.</li>
-    <li>앱의 <strong>설정 → 계정 지우기</strong>로 계정과 서버의 기록을 언제든 지울 수 있습니다.</li>
+<div class="card summary">
+  <strong>요약</strong>
+  <ul>
+    <li>모루를 쓰려면 Apple 또는 Google 계정으로 로그인해야 합니다.</li>
+    <li>입력한 내용·금액·자산·분류는 로그인한 계정의 모루 서버에 저장됩니다. 기기를 바꿔도 기록이 남는 이유입니다.</li>
+    <li>이름·이메일·전화번호는 받지 않습니다.</li>
+    <li>투자 기록(매수·매도·배당·메모)은 <strong>기기 안에만</strong> 저장되고 서버로 보내지 않습니다.</li>
+    <li>어떤 기능이 쓰이는지와 앱이 멈춘 자리를 알기 위해 Google 의 Firebase 로 사용 기록과 오류 보고를 보냅니다. 금액·내용·메모는 보내지 않습니다. 앱의 설정에서 끌 수 있습니다.</li>
+    <li>앱 안에 광고를 보여 주는 SDK 는 없습니다. 다만 광고가 설치로 이어졌는지 재기 위해 Meta 와 Airbridge 의 SDK 로 설치·실행 사건을 보냅니다. iOS 에서는 <strong>추적을 허용한 경우에만</strong> 광고 식별자(IDFA)가 함께 갑니다. 가계부 내용은 싣지 않습니다.</li>
+    <li>사진과 PDF 는 기기 안에서만 읽습니다. 원본 파일은 서버로 가지 않습니다.</li>
+    <li>앱의 설정에서 계정과 서버의 기록을 언제든 지울 수 있습니다.</li>
   </ul>
-</section>
+</div>
 
-<section class="wrap">
+<nav class="card toc" aria-label="목차">
+  <ol>
+    <li><a href="#collect">수집하는 개인정보</a></li>
+    <li><a href="#purpose">이용 목적과 보유 기간</a></li>
+    <li><a href="#share">제3자 제공 · 처리 위탁 · 국외 이전</a></li>
+    <li><a href="#device">기기 안에서 처리하는 것</a></li>
+    <li><a href="#rights">정보주체의 권리와 계정 삭제</a></li>
+    <li><a href="#security">안전성 확보 조치</a></li>
+    <li><a href="#kids">만 14세 미만 아동</a></li>
+    <li><a href="#changes">처리방침의 변경</a></li>
+    <li><a href="#contact">개인정보 보호책임자 · 문의</a></li>
+  </ol>
+</nav>
+
+<article>
+<section id="collect">
   <h2>1. 수집하는 개인정보</h2>
-  <table>
-    <tr><th>로그인 정보</th><td>Apple 또는 Google 이 로그인 때 알려 주는 <strong>계정 고유 식별값</strong>과 로그인 수단(Apple·Google). 이름과 이메일 주소는 요청하지 않고 저장하지 않습니다. Apple 로 로그인한 경우, 탈퇴할 때 연결을 끊기 위한 Apple 인증 토큰을 함께 보관합니다.</td></tr>
-    <tr><th>가계부 기록</th><td>사용자가 앱에 직접 적는 것 — 내용(거래처)·금액·날짜·자산(통장·카드 등의 이름과 처음 있던 돈)·분류·메모·한 달 목표·챌린지에 적은 물건. 은행이나 카드사에서 자동으로 가져오지 않습니다.</td></tr>
+  <div class="table"><table>
+    <tr><th>로그인 정보</th><td>Apple 또는 Google 이 로그인 때 알려 주는 계정 고유 식별값과 로그인 수단(Apple·Google). 이름과 이메일 주소는 요청하지 않고 저장하지 않습니다. Apple 로 로그인한 경우, 탈퇴할 때 연결을 끊기 위한 Apple 인증 토큰을 함께 보관합니다.</td></tr>
+    <tr><th>가계부 기록</th><td>사용자가 앱에 직접 입력하는 것 — 내용(거래처)·금액·날짜·자산(통장·카드 등의 이름과 초기 잔액)·분류·메모·한 달 목표·챌린지에 적은 물건. 은행이나 카드사에서 자동으로 가져오지 않습니다.</td></tr>
     <tr><th>기기 구분값</th><td>여러 기기에서 같은 기록을 고쳤을 때 어느 쪽을 남길지 가르려고, 기록마다 그 기록을 고친 기기의 구분값을 함께 저장합니다. iOS 앱은 처음 실행할 때 만든 무작위 값을, Android 앱은 기기가 이 앱에 주는 Android ID(앱마다 다른 값)를 씁니다. 광고 식별자가 아니며, 사람을 알아보는 데 쓰지 않습니다.</td></tr>
+    <tr><th>문의 내용</th><td>앱의 설정 → 「문의 · 기능 요청」에 사용자가 적어 보낸 글과, 그때의 앱 종류(iOS·Android)·앱 버전·받은 시각. 계정 고유 식별값·이메일·가계부 내용은 함께 보내지 않습니다.</td></tr>
     <tr><th>서버 운영 기록</th><td>서버에 오류가 났을 때 남는 시각과 오류 내용. 금액·내용·메모·인증 토큰은 기록에 남기지 않고, IP 주소를 따로 저장하지 않습니다.</td></tr>
-    <tr><th>사용 기록</th><td>어떤 기능을 썼는지 — 적었다·사진으로 넣었다·몇째 칸의 분류를 골랐다 같은 사건과, 그때의 개수·상태·걸린 시간. <strong>금액·내용·메모·품목·분류 이름·자산 이름은 넣지 않습니다.</strong> 금액은 구간으로도 보내지 않습니다.</td></tr>
+    <tr><th>사용 기록</th><td>어떤 기능을 썼는지 — 입력했다·사진으로 넣었다·몇째 칸의 분류를 골랐다 같은 사건과, 그때의 개수·상태·걸린 시간. 금액·내용·메모·품목·분류 이름·자산 이름·종목 이름은 넣지 않습니다. 금액은 구간으로도 보내지 않습니다.</td></tr>
     <tr><th>오류 보고</th><td>앱이 멈췄을 때 멈춘 자리(호출 경로)와 그때의 앱·기기 상태. 가계부 내용과 계정 정보는 넣지 않습니다.</td></tr>
-    <tr><th>앱·기기 정보와 설치 식별자</th><td>앱 버전·OS 버전·기기 모델·언어와, Firebase 가 앱을 설치할 때마다 새로 만드는 식별자(앱 인스턴스 ID·설치 ID). Google 은 접속 IP 주소로 <strong>대략의 지역</strong>(국가·도시 수준)을 추정합니다. 계정 고유 식별값·이름·이메일·광고 식별자는 Google 에 보내지 않습니다.</td></tr>
-    <tr><th>광고 측정 정보</th><td>Meta 의 SDK 가 스스로 보내는 <strong>설치(첫 실행)·앱 실행·종료</strong> 사건과, 그때의 앱 버전·OS 버전·기기 모델·언어·시간대, 그리고 Android 의 <strong>광고 ID</strong>(GAID). Meta 는 접속 IP 주소로 대략의 지역을 추정합니다. <strong>금액·내용·메모·품목·분류 이름·자산 이름·계정 고유 식별값·이메일·Firebase 의 분석 식별자는 보내지 않습니다.</strong> 적었다·사진으로 넣었다 같은 사용 사건도 Meta 에는 가지 않습니다. SDK 가 사건에 화면 제목·앱 링크 주소를 붙이거나 화면 배치를 수집하는 기능은 꺼 두었습니다.</td></tr>
-    <tr><th>분석 식별자 연결</th><td>계정을 지울 때 Google 에 삭제를 요청하려면 어느 식별자가 이 계정의 것이었는지 알아야 합니다. 그래서 모루 서버가 <strong>계정과 앱 인스턴스 ID 를 이어 둔 목록</strong>을 보관합니다. 삭제 요청에만 쓰고, 개인별 사용 기록을 조회하거나 가계부와 합쳐 분석하는 데 쓰지 않습니다.</td></tr>
-  </table>
-  <p>사용 기록·오류 보고·앱·기기 정보와 설치 식별자·분석 식별자 연결·광고 측정 정보는 <strong>Android 앱 1.1.0 부터</strong> 해당합니다. iOS 앱은 아직 이 정보를 Google Firebase 나 Meta 로 보내지 않으며, 보내기 전에 이 처리방침을 먼저 고칩니다.</p>
-  <p>연락처·정확한 위치는 수집하지 않습니다. 광고 식별자는 위의 광고 측정에만 쓰고, 모루 서버는 받지 않습니다. 앱은 카메라·사진 보관함 권한과 알림을 보내는 권한을 요청하지 않습니다. Android 앱은 사용자가 「알림에서 넣기」를 켠 경우에만 시스템의 <strong>알림 접근</strong> 허용을 요청합니다(4항).</p>
+    <tr><th>앱·기기 정보와 설치 식별자</th><td>앱 버전·OS 버전·기기 모델·언어와, Firebase 가 앱을 설치할 때마다 새로 만드는 식별자(앱 인스턴스 ID·설치 ID). Google 은 접속 IP 주소로 대략의 지역(국가·도시 수준)을 추정합니다. 계정 고유 식별값·이름·이메일·광고 식별자는 Google 에 보내지 않습니다.</td></tr>
+    <tr><th>광고 측정 정보</th><td>Meta 와 Airbridge 의 SDK 가 스스로 보내는 설치(첫 실행)·앱 실행·종료 사건과, 그때의 앱 버전·OS 버전·기기 모델·언어·시간대, 그리고 광고 식별자 — iOS 는 <strong>추적을 허용한 경우에만</strong> IDFA, Android 는 광고 ID(GAID). 각 회사는 접속 IP 주소로 대략의 지역을 추정할 수 있습니다. 금액·내용·메모·품목·분류 이름·자산 이름·계정 고유 식별값·이메일·Firebase 의 분석 식별자는 보내지 않습니다. 입력했다·사진으로 넣었다 같은 사용 사건도 보내지 않습니다. Meta SDK 가 사건에 화면 제목·앱 링크 주소를 붙이거나 화면 배치를 수집하는 기능은 꺼 두었고, Airbridge 의 딥링크 기능은 쓰지 않습니다.</td></tr>
+    <tr><th>분석 식별자 연결</th><td>계정을 지울 때 Google 에 삭제를 요청하려면 어느 식별자가 이 계정의 것이었는지 알아야 합니다. 그래서 모루 서버가 계정과 앱 인스턴스 ID 를 이어 둔 목록을 보관합니다. 삭제 요청에만 쓰고, 개인별 사용 기록을 조회하거나 가계부와 합쳐 분석하는 데 쓰지 않습니다.</td></tr>
+  </table></div>
+  <p>연락처(주소록)·정확한 위치는 수집하지 않습니다. 광고 식별자는 위의 광고 측정에만 쓰고, 모루 서버는 받지 않습니다.</p>
+  <p>앱은 시작하자마자 권한을 요구하지 않습니다. 앱이 요청하는 권한은 다음뿐입니다.</p>
+  <ul>
+    <li><strong>추적 허용(iOS)</strong> — 로그인한 뒤 홈이 처음 열릴 때 한 번 묻습니다. 허용하지 않아도 앱은 똑같이 동작합니다.</li>
+    <li><strong>알림(iOS)</strong> — 투자 기록에 목표가·손절가 알림을 처음 설정할 때만 묻습니다.</li>
+    <li><strong>알림 접근(Android)</strong> — 사용자가 「알림에서 넣기」를 켠 경우에만 요청합니다(4절).</li>
+  </ul>
+  <p>사진과 파일은 사용자가 시스템 선택 화면에서 직접 고른 것만 읽으며, 사진 보관함 전체 접근이나 카메라 권한은 요청하지 않습니다.</p>
 </section>
 
-<section class="wrap">
+<section id="purpose">
   <h2>2. 이용 목적과 보유 기간</h2>
-  <table>
-    <tr><th>로그인 정보</th><td>같은 사람인지 알아보고 그 사람의 가계부를 보여 주는 데 씁니다. <strong>계정을 지울 때까지</strong> 보관합니다.</td></tr>
-    <tr><th>가계부 기록</th><td>기록을 저장하고, 잔액·합계·통계를 계산해 보여 주는 데 씁니다. <strong>사용자가 지우거나 계정을 지울 때까지</strong> 보관합니다.</td></tr>
+  <div class="table"><table>
+    <tr><th>로그인 정보</th><td>같은 사람인지 알아보고 그 사람의 가계부를 보여 주는 데 씁니다. 계정을 지울 때까지 보관합니다.</td></tr>
+    <tr><th>가계부 기록</th><td>기록을 저장하고, 잔액·합계·통계를 계산해 보여 주는 데 씁니다. 사용자가 지우거나 계정을 지울 때까지 보관합니다.</td></tr>
     <tr><th>기기 구분값</th><td>기기 사이에서 기록이 겹칠 때 순서를 가르는 데만 씁니다. 그 기록과 함께 보관하고, 기록이나 계정을 지우면 함께 지워집니다.</td></tr>
-    <tr><th>서버 운영 기록</th><td>장애를 확인하고 고치는 데 씁니다. <strong>30일</strong> 뒤 지워집니다.</td></tr>
-    <tr><th>사용 기록 · 앱·기기 정보</th><td>어떤 기능이 쓰이고 어디서 막히는지 보고 다음에 무엇을 고칠지 정하는 데 씁니다. 보는 것은 분포와 비율이고, 개인의 사용 내역을 들여다보지 않습니다. Google Analytics 에서 개별 사건은 <strong>2개월</strong>, 설치별 식별자에 묶인 정보는 <strong>마지막 사용으로부터 14개월</strong> 뒤 지워지고, 그 뒤에는 누구 것인지 알 수 없는 합계만 남습니다.</td></tr>
-    <tr><th>오류 보고</th><td>앱이 멈추는 원인을 찾아 고치는 데 씁니다. Firebase Crashlytics 에 <strong>90일</strong> 보관된 뒤 지워집니다.</td></tr>
-    <tr><th>설치 식별자</th><td>사용 기록과 오류 보고를 설치별로 구분하고, 일부 기능을 켜고 끄는 설정값을 받는 데 씁니다. 로그아웃하면 앱이 분석 식별자(앱 인스턴스 ID)를 초기화하고, 계정을 지우면 설치 ID 삭제도 요청합니다. Google 은 삭제 요청 뒤 <strong>180일 안에</strong> 설치 ID 를 지웁니다.</td></tr>
-    <tr><th>광고 측정 정보</th><td>Meta 에 낸 앱 설치 광고가 설치·실행으로 이어졌는지 Meta 가 세는 데 씁니다. 모루는 집계된 숫자만 보고, 개인별 기록은 보지 않습니다. Meta 가 자사의 <a href="https://www.facebook.com/privacy/policy/" rel="noopener">개인정보처리방침</a>에 따라 보관합니다.</td></tr>
-    <tr><th>분석 식별자 연결</th><td>계정을 지울 때 Google 에 삭제를 요청하는 데만 씁니다. <strong>계정을 지울 때까지</strong> 보관합니다. 계정을 지우면 계정과의 연결은 바로 끊기고, 식별자는 Google 이 삭제 요청을 접수할 때까지만 남습니다.</td></tr>
-  </table>
-  <p>가계부 기록을 광고·마케팅에 쓰지 않으며, 개인별 소비를 분석해 외부에 제공하지 않습니다.</p>
+    <tr><th>문의 내용</th><td>문의에 답하고 앱을 고치는 데 씁니다. 모루 서버는 문의를 저장하지 않고 운영팀 메일함으로 전달만 합니다. 메일함에서는 답변과 개선에 필요한 동안 보관하며, 삭제를 요청하면 지웁니다.</td></tr>
+    <tr><th>서버 운영 기록</th><td>장애를 확인하고 고치는 데 씁니다. 30일 뒤 지워집니다.</td></tr>
+    <tr><th>사용 기록 · 앱·기기 정보</th><td>어떤 기능이 쓰이고 어디서 막히는지 보고 다음에 무엇을 고칠지 정하는 데 씁니다. 보는 것은 분포와 비율이고, 개인의 사용 내역을 들여다보지 않습니다. Google Analytics 에서 개별 사건은 2개월, 설치별 식별자에 묶인 정보는 마지막 사용으로부터 14개월 뒤 지워지고, 그 뒤에는 누구 것인지 알 수 없는 합계만 남습니다.</td></tr>
+    <tr><th>오류 보고</th><td>앱이 멈추는 원인을 찾아 고치는 데 씁니다. Firebase Crashlytics 에 90일 보관된 뒤 지워집니다.</td></tr>
+    <tr><th>설치 식별자</th><td>사용 기록과 오류 보고를 설치별로 구분하고, 일부 기능을 켜고 끄는 설정값을 받는 데 씁니다. 로그아웃하면 앱이 분석 식별자(앱 인스턴스 ID)를 초기화하고, 계정을 지우면 설치 ID 삭제도 요청합니다. Google 은 삭제 요청 뒤 180일 안에 설치 ID 를 지웁니다.</td></tr>
+    <tr><th>광고 측정 정보</th><td>낸 앱 설치 광고가 설치·실행으로 이어졌는지 Meta 와 Airbridge 가 세는 데 씁니다. 모루는 집계된 숫자만 보고, 개인별 기록은 보지 않습니다. 각 회사가 자사의 개인정보 처리방침에 따라 보관합니다.</td></tr>
+    <tr><th>분석 식별자 연결</th><td>계정을 지울 때 Google 에 삭제를 요청하는 데만 씁니다. 계정을 지울 때까지 보관합니다. 계정을 지우면 계정과의 연결은 바로 끊기고, 식별자는 Google 이 삭제 요청을 접수할 때까지만 남습니다.</td></tr>
+  </table></div>
+  <p>가계부 기록과 투자 기록을 광고·마케팅에 쓰지 않으며, 개인별 소비나 투자를 분석해 외부에 제공하지 않습니다.</p>
 </section>
 
-<section class="wrap">
+<section id="share">
   <h2>3. 제3자 제공 · 처리 위탁 · 국외 이전</h2>
-  <p>개인정보를 제3자에게 <strong>제공하거나 판매하지 않습니다.</strong> 서비스를 운영하기 위해 아래와 같이 처리를 맡기고 있습니다.</p>
-  <table>
-    <tr><th>Amazon Web Services</th><td>서버와 데이터베이스 운영(보관). 서울 리전에 저장합니다.</td></tr>
-    <tr><th>Google LLC (Firebase)</th><td>Android 앱의 사용 기록 집계(Google Analytics)·오류 보고 수집(Crashlytics)·기능 설정값 전달(Remote Config). 국외에서 처리합니다 — 아래 표.</td></tr>
-    <tr><th>Meta Platforms, Inc. (Meta SDK)</th><td>Android 앱의 앱 설치 광고 효과 측정(앱 이벤트). 국외에서 처리합니다 — 아래 둘째 표.</td></tr>
-  </table>
-  <p>Firebase 로 보내는 정보는 국외로 이전됩니다.</p>
-  <table>
-    <tr><th>이전받는 자</th><td>Google LLC (<a href="https://policies.google.com/privacy?hl=ko" rel="noopener">개인정보 처리방침</a>)</td></tr>
+  <p>개인정보를 제3자에게 제공하거나 판매하지 않습니다. 서비스를 운영하기 위해 아래와 같이 처리를 맡기고 있습니다.</p>
+  <div class="table"><table>
+    <tr><th>Amazon Web Services</th><td>서버와 데이터베이스 운영(보관) — 서울 리전에 저장합니다. 앱 안 문의를 운영팀 메일함으로 전달하는 메일 발송(Amazon SES).</td></tr>
+    <tr><th>Google LLC (Firebase)</th><td>사용 기록 집계(Google Analytics)·오류 보고 수집(Crashlytics)·기능 설정값 전달(Remote Config). 국외에서 처리합니다 — 아래 첫째 표.</td></tr>
+    <tr><th>Meta Platforms, Inc. (Meta SDK)</th><td>앱 설치 광고 효과 측정(앱 이벤트). 국외에서 처리합니다 — 아래 둘째 표.</td></tr>
+    <tr><th>에이비일팔공 주식회사 (Airbridge)</th><td>여러 광고망에 걸친 앱 설치 광고 효과 측정. Airbridge 가 운영하는 클라우드에서 처리하며, 보관 위치와 기간은 <a href="https://www.airbridge.io/privacy-policy">Airbridge 개인정보 처리방침</a>을 따릅니다.</td></tr>
+  </table></div>
+
+  <p><strong>Firebase 로 보내는 정보는 국외로 이전됩니다.</strong></p>
+  <div class="table"><table>
+    <tr><th>이전받는 자</th><td>Google LLC (<a href="https://policies.google.com/privacy">개인정보 처리방침</a>)</td></tr>
     <tr><th>이전되는 국가</th><td>미국 등 Google 이 데이터센터를 운영하는 국가</td></tr>
     <tr><th>이전 일시 · 방법</th><td>앱을 쓰는 동안 수시로, 암호화된 통신(HTTPS)으로 전송합니다.</td></tr>
-    <tr><th>이전 항목</th><td>1절의 사용 기록·오류 보고·앱·기기 정보와 설치 식별자. 가계부 기록과 계정 고유 식별값은 이전하지 않습니다.</td></tr>
+    <tr><th>이전 항목</th><td>1절의 사용 기록·오류 보고·앱·기기 정보와 설치 식별자. 가계부 기록·투자 기록·계정 고유 식별값은 이전하지 않습니다.</td></tr>
     <tr><th>이용 목적 · 보유 기간</th><td>2절과 같습니다.</td></tr>
-    <tr><th>거부 방법 · 효과</th><td>앱의 <strong>설정 → 앱 → 사용 기록 보내기</strong>를 끄면 그 기기에서 사용 기록·오류 보고·설정값 요청이 멈춥니다. 끄더라도 <strong>모루의 모든 기능을 그대로 쓸 수 있습니다.</strong> 기기마다 따로 정하며, 로그아웃해도 꺼진 채로 남습니다. 끄기 전에 이미 보낸 기록은 2절의 보유 기간이 지나거나 계정을 지울 때 삭제됩니다.</td></tr>
-  </table>
-  <p>Google 이 이 정보를 광고에 쓰도록 하는 설정(광고 맞춤·Google 신호·Google 제품과의 데이터 공유)은 모두 꺼 두었습니다.</p>
-  <p>Meta 로 보내는 광고 측정 정보도 국외로 이전됩니다.</p>
-  <table>
-    <tr><th>이전받는 자</th><td>Meta Platforms, Inc. (<a href="https://www.facebook.com/privacy/policy/" rel="noopener">개인정보처리방침</a>)</td></tr>
+    <tr><th>거부 방법 · 효과</th><td>앱의 설정 → 앱 → 「사용 기록 보내기」를 끄면 그 기기에서 사용 기록·오류 보고·설정값 요청이 멈춥니다. 끄더라도 모루의 모든 기능을 그대로 쓸 수 있습니다. 기기마다 따로 정하며, 로그아웃해도 꺼진 채로 남습니다. 끄기 전에 이미 보낸 기록은 2절의 보유 기간이 지나거나 계정을 지울 때 삭제됩니다.</td></tr>
+  </table></div>
+  <p class="note">Google 이 이 정보를 광고에 쓰도록 하는 설정(광고 맞춤·Google 신호·Google 제품과의 데이터 공유)은 모두 꺼 두었습니다.</p>
+
+  <p><strong>Meta 로 보내는 광고 측정 정보도 국외로 이전됩니다.</strong></p>
+  <div class="table"><table>
+    <tr><th>이전받는 자</th><td>Meta Platforms, Inc. (<a href="https://www.facebook.com/privacy/policy">개인정보처리방침</a>)</td></tr>
     <tr><th>이전되는 국가</th><td>미국 등 Meta 가 데이터센터를 운영하는 국가</td></tr>
     <tr><th>이전 일시 · 방법</th><td>앱을 설치해 처음 실행할 때와 그 뒤 실행·종료할 때, 암호화된 통신(HTTPS)으로 전송합니다.</td></tr>
-    <tr><th>이전 항목</th><td>1절의 광고 측정 정보. 가계부 기록·계정 고유 식별값·사용 기록·오류 보고는 이전하지 않습니다.</td></tr>
+    <tr><th>이전 항목</th><td>1절의 광고 측정 정보. 가계부 기록·투자 기록·계정 고유 식별값·사용 기록·오류 보고는 이전하지 않습니다.</td></tr>
     <tr><th>이용 목적 · 보유 기간</th><td>2절과 같습니다.</td></tr>
-    <tr><th>거부 방법 · 효과</th><td>Android 의 <strong>설정 → 개인정보 보호 → 광고</strong>에서 광고 ID 를 지우거나 재설정하면 그 뒤로는 광고 식별자 없이 설치·실행 집계만 갑니다. 거부하더라도 <strong>모루의 모든 기능을 그대로 쓸 수 있습니다.</strong> 앱의 「사용 기록 보내기」 스위치는 Firebase 의 것이라 Meta 전송에는 걸리지 않습니다.</td></tr>
-  </table>
-  <p>로그인은 Apple 의 「Apple 로 로그인」 또는 Google 의 「Google 로 로그인」을 거칩니다. 이때 각 회사가 처리하는 정보에는 <a href="https://www.apple.com/kr/legal/privacy/" rel="noopener">Apple</a>, <a href="https://policies.google.com/privacy?hl=ko" rel="noopener">Google</a> 의 개인정보 처리방침이 적용됩니다. 모루는 가계부 기록을 이 회사들에 보내지 않습니다.</p>
-  <p>Android 앱의 「사진에서 넣기」「내역서 넣기」는 Google ML Kit 으로 기기 안에서 글자를 읽습니다. 사진과 읽은 글자는 보내지 않습니다. 다만 ML Kit 은 기능 진단을 위해 기기 모델·OS 버전·앱 이름과 버전·처리 시간·오류 코드·설치별 식별값을 암호화해 Google LLC(미국)로 보냅니다(<a href="https://developers.google.com/ml-kit/android-data-disclosure" rel="noopener">ML Kit 데이터 공개</a>).</p>
-  <p>앱 안에 광고를 보여 주는 네트워크는 들어 있지 않습니다. Android 앱은 광고 측정을 위해서만 광고 ID 를 읽습니다(위 표). 제3자 SDK 는 Google 로그인과, Android 앱의 Google Firebase(Analytics·Crashlytics·Remote Config), 글자 인식에 쓰는 Google ML Kit, 그리고 Android 앱의 Meta SDK(앱 이벤트만 — 로그인·공유 기능은 넣지 않았습니다) 입니다. iOS 앱에는 아직 행동 분석(analytics)·오류 수집·광고 측정 SDK 가 들어 있지 않고, 추적 허용을 묻지 않습니다.</p>
+  </table></div>
+
+  <p><strong>광고 측정을 거부하는 방법.</strong> Meta 와 Airbridge 모두에 적용됩니다.</p>
+  <ul>
+    <li><strong>iOS</strong> — 추적 허용 창에서 「앱에 추적 금지 요청」을 고르거나, 설정 → 개인정보 보호 및 보안 → 추적에서 모루를 끕니다. 그러면 광고 식별자 없이 설치·실행 집계만 갑니다.</li>
+    <li><strong>Android</strong> — 설정 → 개인정보 보호 → 광고에서 광고 ID 를 지우거나 재설정합니다.</li>
+    <li>어느 쪽이든 거부해도 모루의 모든 기능을 그대로 쓸 수 있습니다. 앱의 「사용 기록 보내기」 스위치는 Firebase 의 것이라 광고 측정에는 걸리지 않습니다.</li>
+  </ul>
+
+  <p><strong>Google 광고의 설치는 Apple 이 집계합니다.</strong> iOS 앱은 처음 실행할 때 Apple 의 SKAdNetwork 에 설치됐다는 사실만 알립니다. Apple 이 기기 안에서 광고 클릭과 맞춰 본 뒤, 해당 광고망(Google 또는 Meta)에 캠페인 번호와 전환값만 담긴 집계 결과를 보냅니다. 사람·기기·가계부 내용은 가지 않으며, 추적 허용 여부와 상관없습니다. 앱에 Google 광고 SDK 는 들어 있지 않습니다.</p>
+
+  <p><strong>로그인.</strong> 로그인은 Apple 의 「Apple 로 로그인」 또는 Google 의 「Google 로 로그인」을 거칩니다. 이때 각 회사가 처리하는 정보에는 Apple, Google 의 개인정보 처리방침이 적용됩니다. 모루는 가계부 기록을 이 회사들에 보내지 않습니다.</p>
+
+  <p><strong>시세 조회(투자).</strong> 투자 화면은 현재가·환율을 받으려고 야후 파이낸스에, 종목을 찾으려고 네이버 증권 자동완성에 요청합니다. 이때 보내는 것은 <strong>종목 코드나 사용자가 입력한 검색어뿐</strong>이며, 보유 수량·매수가·투자 기록·계정 정보는 보내지 않습니다. 다만 일반적인 인터넷 요청처럼 각 회사가 접속 IP 주소를 볼 수 있습니다. 이 회사들은 모루의 수탁자가 아니며, 각 회사의 개인정보 처리방침이 적용됩니다.</p>
+
+  <p><strong>Android 의 글자 인식.</strong> Android 앱의 「사진에서 넣기」「내역서 넣기」는 Google ML Kit 으로 기기 안에서 글자를 읽습니다. 사진과 읽은 글자는 보내지 않습니다. 다만 ML Kit 은 기능 진단을 위해 기기 모델·OS 버전·앱 이름과 버전·처리 시간·오류 코드·설치별 식별값을 암호화해 Google LLC(미국)로 보냅니다.</p>
+
+  <p class="note">앱 안에 광고를 보여 주는 네트워크는 들어 있지 않습니다. 제3자 SDK 는 Google 로그인, Google Firebase(Analytics·Crashlytics·Remote Config), Meta SDK(앱 이벤트만 — 로그인·공유 기능은 넣지 않았습니다), Airbridge SDK(설치·실행 측정만), 그리고 Android 앱의 Google ML Kit 입니다.</p>
 </section>
 
-<section class="wrap">
+<section id="device">
   <h2>4. 기기 안에서 처리하는 것</h2>
-  <table>
+  <div class="table"><table>
+    <tr><th>투자 기록</th><td>매수·매도·배당·분할·메모·증권 계좌 이름·가격 알림 설정은 기기 안에만 저장되고 모루 서버로 보내지 않습니다. 앱을 지우면 함께 지워지므로, 옮기거나 따로 남기려면 설정의 「투자 기록 CSV 내보내기」를 쓰세요.</td></tr>
+    <tr><th>가격 알림 (iOS)</th><td>목표가·손절가 알림을 켠 경우, iOS 가 정하는 때에 백그라운드에서 시세를 확인하고 기기 안에서 알림을 띄웁니다. 알림 내용은 서버를 거치지 않습니다.</td></tr>
     <tr><th>사진 · PDF</th><td>「사진에서 넣기」「내역서 넣기」에서 사용자가 직접 고른 파일만 읽고, 글자 인식은 기기 안에서 합니다. 원본 파일은 서버로 보내지 않습니다. 사용자가 미리보기에서 확인하고 저장한 거래만 서버에 저장됩니다.</td></tr>
-    <tr><th>결제 알림 (Android)</th><td>사용자가 설정에서 「알림에서 넣기」를 켜고 알림 접근을 허용한 경우에만, 카드·은행 앱의 알림과 카드 승인 문자 알림을 기기 안에서 읽습니다. 그 밖의 알림은 읽기 전에 걸러져 어디에도 남지 않습니다. 결제 알림에서 <strong>금액·가게·시각·카드 뒷자리</strong>만 꺼내 이 기기에 두고, 알림 원문은 남기지 않습니다. 사용자가 확인하고 저장한 것만 거래로 서버에 저장됩니다. 저장하지 않은 것은 최대 100개·30일까지 두며, 기능을 끄거나 로그아웃·탈퇴하면 지웁니다.</td></tr>
+    <tr><th>결제 알림 (Android)</th><td>사용자가 설정에서 「알림에서 넣기」를 켜고 알림 접근을 허용한 경우에만, 카드·은행 앱의 알림과 카드 승인 문자 알림을 기기 안에서 읽습니다. 그 밖의 알림은 읽기 전에 걸러져 어디에도 남지 않습니다. 결제 알림에서 금액·가게·시각·카드 뒷자리만 꺼내 이 기기에 두고, 알림 원문은 남기지 않습니다. 사용자가 확인하고 저장한 것만 거래로 서버에 저장됩니다. 저장하지 않은 것은 최대 100개·30일까지 두며, 기능을 끄거나 로그아웃·탈퇴하면 지웁니다.</td></tr>
     <tr><th>위젯</th><td>홈 화면 위젯이 보여 줄 요약을 기기 안에 사본으로 둡니다.</td></tr>
     <tr><th>로그인 유지</th><td>로그인 상태를 유지하기 위한 토큰을 기기의 안전한 저장소(iOS 키체인, Android Keystore)에 보관합니다.</td></tr>
     <tr><th>진단 데이터</th><td>iOS 설정에서 「앱 개발자와 공유」를 켠 경우에만 Apple 이 앱 충돌 정보를 익명으로 개발자에게 전달할 수 있습니다. 가계부 내용은 포함되지 않습니다.</td></tr>
-  </table>
+  </table></div>
 </section>
 
-<section class="wrap">
+<section id="rights">
   <h2>5. 정보주체의 권리와 계정 삭제</h2>
   <ul>
     <li><strong>열람·정정</strong> — 앱에서 기록을 눌러 언제든 보고 고칠 수 있습니다.</li>
     <li><strong>기록 삭제</strong> — 앱에서 기록을 하나씩 지울 수 있습니다.</li>
-    <li><strong>계정 삭제(탈퇴)</strong> — 앱의 <strong>설정 → 계정 지우기</strong>에서 직접 합니다. 로그인 정보와 서버에 있는 가계부 기록 전체가 즉시 삭제되고, 되돌릴 수 없습니다. Apple 로 로그인했다면 Apple 과의 연결도 함께 끊습니다.</li>
+    <li><strong>계정 삭제(탈퇴)</strong> — iOS 는 앱의 설정 → 계정 관리 → 회원 탈퇴, Android 는 앱의 설정 → 계정 지우기에서 직접 합니다. 로그인 정보와 서버에 있는 가계부 기록 전체가 즉시 삭제되고, 되돌릴 수 없습니다. Apple 로 로그인했다면 Apple 과의 연결도 함께 끊습니다.</li>
+    <li><strong>투자 기록</strong> — 기기 안에만 있으므로 앱에서 지우거나 앱을 삭제하면 지워집니다. 계정 삭제와는 따로입니다.</li>
     <li><strong>Google 에 쌓인 사용 기록</strong> — 계정을 지우면 모루 서버가 이 계정에 이어져 있던 모든 설치의 사용 기록을 지워 달라고 Google 에 요청하고, 실패하면 다시 시도합니다. 앱은 기기의 분석 데이터와 식별자를 초기화합니다. Google 이 요청을 처리하는 데에는 시간이 걸리고, 누구 것인지 알 수 없게 합쳐진 통계는 남을 수 있습니다. 오류 보고는 계정과 이어 두지 않아 계정 삭제 때 골라 지우지 못하며, 보존 기간(90일)이 지나면 지워집니다.</li>
-    <li><strong>Meta 에 보낸 광고 측정 정보</strong> — 계정과 이어 두지 않아 계정 삭제 때 골라 지우지 못하며, Meta 의 보관 방침을 따릅니다. 광고 ID 를 재설정하면 그 뒤의 사건은 이전 식별자와 이어지지 않습니다.</li>
+    <li><strong>광고 측정 정보(Meta · Airbridge)</strong> — 계정과 이어 두지 않아 계정 삭제 때 골라 지우지 못하며, 각 회사의 보관 방침을 따릅니다. 광고 식별자를 재설정하거나 추적을 끄면 그 뒤의 사건은 이전 식별자와 이어지지 않습니다.</li>
     <li><strong>로그아웃</strong> — 이 기기의 로그인만 끊습니다. 서버의 기록은 지워지지 않습니다. 기기의 분석 식별자는 초기화되어, 다음에 로그인하면 새 식별자로 시작합니다.</li>
   </ul>
-  <p>장애 복구용 데이터베이스 백업에는 삭제 후에도 최대 <strong>7일</strong> 동안 사본이 남았다가 자동으로 지워집니다. 이 사본은 복구 목적 외에 쓰지 않습니다.</p>
+  <p>장애 복구용 데이터베이스 백업에는 삭제 후에도 최대 7일 동안 사본이 남았다가 자동으로 지워집니다. 이 사본은 복구 목적 외에 쓰지 않습니다.</p>
   <p>앱을 쓸 수 없는 상황이라면 아래 이메일로 삭제·열람을 요청할 수 있습니다. 앱을 지우는 것만으로는 서버의 기록이 지워지지 않습니다.</p>
 </section>
 
-<section class="wrap">
+<section id="security">
   <h2>6. 안전성 확보 조치</h2>
   <ul>
     <li>앱과 서버 사이의 통신은 모두 HTTPS 로 암호화합니다.</li>
-    <li>데이터베이스는 저장 시 암호화합니다.</li>
+    <li>데이터베이스는 저장 시 암호화하고, 거래처 이름·메모는 애플리케이션에서 한 번 더 암호화해 저장합니다.</li>
     <li>로그인 토큰은 기기의 안전한 저장소(iOS 키체인, Android Keystore)에 보관하고, 금액·내용·메모·인증 토큰을 로그에 남기지 않습니다.</li>
     <li>운영자가 개인의 가계부를 들여다보는 화면을 만들지 않습니다.</li>
   </ul>
 </section>
 
-<section class="wrap">
+<section id="kids">
   <h2>7. 만 14세 미만 아동</h2>
   <p>모루는 만 14세 미만 아동을 대상으로 하지 않으며, 만 14세 미만 아동의 개인정보를 알면서 수집하지 않습니다. 그런 사실을 알게 되면 해당 계정과 기록을 지체 없이 삭제합니다.</p>
 </section>
 
-<section class="wrap">
+<section id="changes">
   <h2>8. 처리방침의 변경</h2>
   <p>수집 항목이나 맡기는 곳이 바뀌면 앱에 반영하기 전에 이 처리방침을 고치고, 시행일과 변경 내용을 이 페이지에 적습니다.</p>
+  <div class="table"><table>
+    <thead><tr><th>날짜</th><th>내용</th></tr></thead>
+    <tr><td>2026-10-23</td><td>iOS 앱 1.2 를 적용 대상에 넣음 — Firebase 사용 기록·오류 보고, Meta SDK 와 Airbridge SDK 의 광고 측정과 추적 허용(IDFA), SKAdNetwork 설치 집계, 앱 안 문의(Amazon SES), 기기 안에만 두는 투자 기록, 시세 조회(야후 파이낸스·네이버 증권), 가격 알림과 알림 권한. iOS 계정 삭제 경로를 설정 → 계정 관리 → 회원 탈퇴로 고침</td></tr>
+    <tr><td>2026-10-21</td><td>Meta SDK(앱 이벤트)로 설치·실행 사건과 광고 ID 를 보내는 것을 반영(Android 앱 1.1.0)</td></tr>
+    <tr><td>2026-10-15</td><td>사용 기록·오류 보고를 Google Firebase 로 보내는 것을 반영(Android 앱 1.0.1). Android 의 「알림에서 넣기」를 반영</td></tr>
+    <tr><td>2026-10-14</td><td>Android 앱을 적용 대상에 넣음. 문의 이메일을 smp500busan@gmail.com 으로 변경</td></tr>
+    <tr><td>2026-10-06</td><td>로그인과 서버 저장을 반영해 전면 개정</td></tr>
+    <tr><td>2026-08-19</td><td>최초 시행 (iOS 1.0)</td></tr>
+  </table></div>
 </section>
 
-<section class="wrap">
+<section id="contact">
   <h2>9. 개인정보 보호책임자 · 문의</h2>
-  <table>
+  <div class="table"><table>
     <tr><th>운영</th><td>모루 팀</td></tr>
     <tr><th>이메일</th><td><a href="mailto:smp500busan@gmail.com">smp500busan@gmail.com</a></td></tr>
-  </table>
+  </table></div>
   <p>처리방침에 관한 질문, 권리 행사 요청, 불만은 위 이메일로 보내 주세요. 확인하는 대로 답합니다.</p>
 </section>
+</article>
+</main>
 
-<section class="wrap">
-  <h2>변경 이력</h2>
-  <table>
-    <tr><th>2026-10-21</th><td>Meta SDK(앱 이벤트)로 설치·실행 사건과 광고 ID 를 보내는 것을 반영(Android 앱 1.1.0) — 수집 항목·목적·처리 위탁·국외 이전·거부 방법. Firebase 를 처음 싣는 Android 판은 1.0.1 이 아니라 1.1.0 으로 나간다</td></tr>
-    <tr><th>2026-10-15</th><td>사용 기록·오류 보고를 Google Firebase 로 보내는 것을 반영(Android 앱 1.0.1) — 수집 항목·보유 기간·처리 위탁·국외 이전·계정 삭제</td></tr>
-    <tr><th>2026-10-15</th><td>Android 의 「알림에서 넣기」를 반영 — 켠 경우에만 알림 접근을 요청하고, 결제 알림에서 꺼낸 값은 기기 안에 두며 저장한 것만 서버로 간다는 것</td></tr>
-    <tr><th>2026-10-14</th><td>Android 앱을 적용 대상에 넣음 — 기기 구분값, Android 글자 인식(ML Kit)의 진단 정보, 로그인 토큰 보관 위치. 문의 이메일을 smp500busan@gmail.com 으로 변경</td></tr>
-    <tr><th>2026-10-06</th><td>로그인과 서버 저장을 반영해 전면 개정 — 수집 항목·보유 기간·처리 위탁·계정 삭제</td></tr>
-    <tr><th>2026-08-19</th><td>최초 시행 (iOS 1.0)</td></tr>
-  </table>
-</section>
-
-<footer class="wrap">
-  <p><a href="index.html">모루 소개</a> · <a href="manual.html">앱 사용설명서</a></p>
-  <p style="margin-top:14px">SMP 500 · iOS</p>
+<footer class="foot">
+  <div class="wrap">
+    <a href="./">소개</a>
+    <a href="manual.html">사용설명서</a>
+    <a href="privacy.html">개인정보 처리방침</a>
+    <a href="support.html">문의</a>
+    <span class="copy">© 2026 모루 팀 · SMP 500</span>
+  </div>
 </footer>
-
 </body>
 </html>

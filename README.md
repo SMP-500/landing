@@ -11,8 +11,10 @@
 | `index.html` | 한 장짜리 제품 소개 |
 | `manual.html` | 앱 사용설명서 |
 | `privacy.html` | 개인정보 처리방침 — App Store 의 Privacy Policy URL 이 가리키는 곳 |
+| `support.html` | 고객 지원 — 문의 방법 · 자주 묻는 질문 · 계정 삭제. App Store 의 Support URL 이 가리키는 곳 |
+| `assets/` | 공통 스타일(`site.css`, 앱 `Theme.swift` 색) · 앱 아이콘 · 분류 그림 |
 
-셋 다 **의존성 없는 단일 HTML 파일**입니다. 이미지가 없어 화면이 바뀌어도 낡지 않습니다. 빌드 단계가 없고, 브라우저로 바로 열립니다.
+모두 **빌드 없는 HTML** 이고 `assets/site.css` 하나를 같이 씁니다. 그림은 앱의 아이콘 · 분류 그림만 써서 화면이 바뀌어도 낡지 않습니다. 빌드 단계가 없고, 브라우저로 바로 열립니다.
 라이트·다크 모두 대응합니다.
 
 ---
@@ -39,11 +41,12 @@
 | 용도 | 주소 |
 | --- | --- |
 | Marketing URL (소개) | `https://smp-500.github.io/landing/` |
-| Support URL (설명서·문의) | `https://smp-500.github.io/landing/manual.html` |
+| Support URL (문의·자주 묻는 질문) | `https://smp-500.github.io/landing/support.html` |
+| Privacy Policy URL | `https://smp-500.github.io/landing/privacy.html` |
 
 **사이트 소스는 이 저장소 한 곳에만 둡니다.** 다른 곳에 사본을 두면 반드시 갈라집니다.
 커스텀 도메인을 붙이면 `CNAME` 파일 한 줄을 여기 더하고 위 표를 고칩니다.
-지원 페이지의 문의 이메일은 `manual.html` 의 `#contact` 장에 있습니다.
+문의 이메일은 `support.html` · `privacy.html` 9절 · `manual.html` 의 `#contact` 장에 있습니다 — 바꾸면 셋 다 고칩니다.
 
 발표 자료(`keynote.html`)는 앱 화면이 낡아 뺐습니다. 필요하면 git 이력(`0ada283` 이전)에서 꺼내
 **현재 화면으로 다시 찍어** 넣습니다.
